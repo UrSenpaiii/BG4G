@@ -21,5 +21,8 @@ Vue.component('footer-comp', require('./footer.vue').default);
 
 // Vue init
 const app = new Vue({
-  el: '#app'
+  el: '#app',
+  data: {
+
+  }
 });

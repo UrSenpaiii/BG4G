@@ -64,14 +64,14 @@ module.exports = {
           }
         }
       },
-      {
-        // Fonts
-        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        loader: "file-loader",
-        options: {
-          alias: "[alias].[ext]"
-        }
-      },
+      // {
+      //   // Fonts
+      //   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+      //   loader: "file-loader",
+      //   options: {
+      //     alias: "[alias].[ext]"
+      //   }
+      // },
       {
         // images / icons
         test: /\.(png|jpg|gif|svg)$/,
@@ -137,7 +137,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {from: `${PATHS.src}${PATHS.assets}img`, to: `${PATHS.assets}img`},
-      {from: `${PATHS.src}${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`},
+      // {from: `${PATHS.src}${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`},
       {from: `${PATHS.src}static`, to: ""},
     ]),
     ...PAGES.map(page => new HtmlWebpackPlugin({
