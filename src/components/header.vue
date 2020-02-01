@@ -12,7 +12,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="pages/catalog.html">All courses</a>
+              <a class="nav-link" href="/pages/catalog.html">All courses</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">By filters</a>

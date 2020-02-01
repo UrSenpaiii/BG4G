@@ -7,7 +7,7 @@
           </a>
         </div>
         <div class="card-body">
-          <div class="h3 text-capitalize"><a href="#">{{alias}}</a></div>
+          <div class="h3"><a href="#">{{title}}</a></div>
           <div>
             <a href="#">Видео: <b>{{videos}}</b> шт.</a>
             <br>
@@ -23,7 +23,7 @@
 <script>
   export default {
     props: {
-      alias: String, videos: String, books: String,
+      alias: String, title: String, videos: Number, books: Number,
     },
     data() {
       return {}
@@ -31,6 +31,6 @@
   }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>
