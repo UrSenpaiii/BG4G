@@ -9,6 +9,7 @@
       </div>
       <!------------>
       <div class="tab-content col-10 p-0" v-for="card in contents">
+        <!--Main-->
         <div class="tab-pane fade show active" id="main">
           <div class="row">
             <div class="col-12 p-4">
@@ -32,7 +33,9 @@
             </div>
           </div>
         </div>
+        <!--Basics-->
         <div class="tab-pane fade" id="basics">
+          <!--Tabs for basics-->
           <ul class="nav nav-tabs" id="myTab">
             <li class="nav-item">
               <a class="nav-link active  border-left-0" style="border-top-left-radius: 0;" data-toggle="tab"
@@ -43,6 +46,7 @@
             </li>
           </ul>
           <div class="tab-content">
+            <!--Videos-->
             <div class="tab-pane fade show active" id="videos-basic">
               <div class="card m-3 px-3" v-for="video in card.videos">
                 <div class="card-body">
@@ -61,6 +65,7 @@
                 </div>
               </div>
             </div>
+            <!--Books-->
             <div class="tab-pane fade" id="books-basic">
               <div class="card m-3 px-3" v-for="book in card.books">
                 <div class="card-body">
@@ -81,7 +86,9 @@
             </div>
           </div>
         </div>
+        <!--Frameworks-->
         <div class="tab-pane fade" id="frameworks">
+          <!--Tabs for frameworks-->
           <ul class="nav nav-tabs">
             <li class="nav-item">
               <a class="nav-link active  border-left-0" style="border-top-left-radius: 0;" data-toggle="tab"
@@ -92,6 +99,7 @@
             </li>
           </ul>
           <div class="tab-content">
+            <!--Videos-->
             <div class="tab-pane fade show active" id="videos-frameworks">
               <div class="card m-3 px-3">
                 <div class="card-body">
@@ -113,6 +121,7 @@
                 </div>
               </div>
             </div>
+            <!--Books-->
             <div class="tab-pane fade" id="books-frameworks">
               <div class="card m-3 px-3">
                 <div class="card-body">
@@ -135,6 +144,7 @@
                 </div>
               </div>
             </div>
+            <!---->
           </div>
         </div>
       </div>
