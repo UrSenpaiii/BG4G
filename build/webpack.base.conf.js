@@ -1,5 +1,3 @@
-/* Base config:
-   ========================================================================== */
 const path = require("path");
 const fs = require("fs");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -7,7 +5,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {VueLoaderPlugin} = require("vue-loader");
 
-// Main const. Feel free to change it
+// Main const, free to change it
 const PATHS = {
   src: path.join(__dirname, "../src/"),
   dist: path.join(__dirname, "../dist"),
