@@ -9,18 +9,16 @@
 <body>
 <div id="app">
   <header>
-    <header-comp>
-      <modal-form></modal-form>
-    </header-comp>
+    <v-header>
+      <v-modal-form></v-modal-form>
+    </v-header>
   </header>
   <main>
-    <catalog>
-      <catalog-card alias="c" title="C" :videos="2" :books="3"></catalog-card>
-    </catalog>
+    <v-catalog>
+      <v-catalog-card alias="c" title="C" :videos="2" :books="3"></v-catalog-card>
+    </v-catalog>
   </main>
-  <footer>
-    <footer-comp></footer-comp>
-  </footer>
+  <v-footer></v-footer>
 </div> <!-- end #app wrapper -->
 </body>
 </html>
