@@ -6,7 +6,6 @@
   export default {
     mounted() {
       let canvas = this.$el, ctx = canvas.getContext("2d");
-      console.log("hello canvas where are you?");
       canvas.width = window.innerWidth - 17;
       canvas.height = 635;
       setInterval(() => {

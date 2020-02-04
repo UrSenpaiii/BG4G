@@ -1,5 +1,5 @@
-const path = require("path");
-const fs = require("fs");
+const path = require(`path`);
+const fs = require(`fs`);
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -8,12 +8,12 @@ const {VueLoaderPlugin} = require("vue-loader");
 // Main const, free to change it
 const PATHS = {
   src: path.join(__dirname, "../src/"),
-  dist: path.join(__dirname, "../dist"),
+  dist: path.join(__dirname, "../dist/"),
   assets: "assets/"
 };
 
 // Pages const for HtmlWebpackPlugin
-const PAGES_DIR = `${PATHS.src}`;
+const PAGES_DIR = `${PATHS.src}pages/`;
 const PAGES = fs
   .readdirSync(PAGES_DIR)
   .filter(fileName => fileName.endsWith(".html"));
@@ -138,28 +138,16 @@ module.exports = {
       // {from: `${PATHS.src}${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`},
       {from: `${PATHS.src}static`, to: ""},
     ]),
+    new HtmlWebpackPlugin({
+      meta: Meta,
+      template: `${PATHS.src}index.html`,
+      filename: `index.html`,
+    }),
     ...PAGES.map(page => new HtmlWebpackPlugin({
       meta: Meta,
-      template: `${PAGES_DIR}/${page}`,
-      filename: `./${page}`,
+      template: `${PAGES_DIR}${page}`,
+      filename: `${page}`,
     })),
-    new HtmlWebpackPlugin({
-      meta: Meta,
-      template: `${PAGES_DIR}/pages/catalog.html`,
-      filename: `./pages/catalog.html`,
-    }),
-    new HtmlWebpackPlugin({
-      meta: Meta,
-      template: `${PAGES_DIR}/pages/current.html`,
-      filename: `./pages/current.html`,
-    }),
-/*    const prefix = "v-";
-    const components = require.context("./", true, /\w+\.(vue)$/);
-    components.keys().forEach(filename => {
-      const config = components(filename);
-      const name = filename.split("/").pop().replace(/\.\w+$/, "").replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
-      Vue.component(prefix + name, config.default || config);
-      console.log(filename, "mapped by", prefix + name);
-    });*/
+
   ]
 };
