@@ -148,6 +148,5 @@ module.exports = {
       template: `${PAGES_DIR}${page}`,
       filename: `${page}`,
     })),
-
   ]
 };
