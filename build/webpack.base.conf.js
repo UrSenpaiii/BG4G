@@ -23,6 +23,7 @@ module.exports = {
   externals: {
     paths: PATHS
   },
+  //Main point
   entry: {
     app: PATHS.src
     // module: `${PATHS.src}/module.js`,
