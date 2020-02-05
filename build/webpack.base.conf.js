@@ -147,7 +147,7 @@ module.exports = {
     ...PAGES.map(page => new HtmlWebpackPlugin({
       meta: Meta,
       template: `${PAGES_DIR}${page}`,
-      filename: `${page}`,
+      filename: `pages/${page}`,
     })),
   ]
 };
