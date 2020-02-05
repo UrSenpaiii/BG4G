@@ -1,3 +1,6 @@
+// CSS
+import './assets/css/main.css'
+
 // SCSS
 import './assets/scss/index.scss'
 
@@ -11,9 +14,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 // JS
 import './js/'
-
-// CSS
-import './assets/css/main.css'
 
 // Vue.js
 window.Vue = require('vue');
