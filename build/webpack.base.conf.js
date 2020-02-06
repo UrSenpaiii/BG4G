@@ -26,7 +26,6 @@ module.exports = {
   //Main point
   entry: {
     app: PATHS.src
-    // module: `${PATHS.src}/module.js`,
   },
   output: {
     filename: `${PATHS.assets}js/[name].[hash].js`,
@@ -122,12 +121,6 @@ module.exports = {
         ]
       }
     ]
-  },
-  resolve: {
-    alias: {
-      "~": PATHS.src,
-      vue$: "vue/dist/vue.js"
-    }
   },
   plugins: [
     new VueLoaderPlugin(),

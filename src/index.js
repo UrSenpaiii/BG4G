@@ -18,13 +18,12 @@ import './js/'
 // Vue.js
 window.Vue = require('vue');
 
-const prefix = "v-";
 const components = require.context("./", true, /\w+\.(vue)$/);
 components.keys().forEach(filename => {
   const config = components(filename);
   const name = filename.split("/").pop().replace(/\.\w+$/, "").replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
-  Vue.component(prefix + name, config.default || config);
-  console.log(filename, "mapped by", prefix + name);
+  Vue.component("v-" + name, config.default || config);
+  console.log(filename, "mapped by", "v-" + name);
 });
 
 const app = new Vue({
