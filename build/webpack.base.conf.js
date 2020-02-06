@@ -62,14 +62,6 @@ module.exports = {
           }
         }
       },
-      // {
-      //   // Fonts
-      //   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-      //   loader: "file-loader",
-      //   options: {
-      //     alias: "[alias].[ext]"
-      //   }
-      // },
       {
         // images / icons
         test: /\.(png|jpg|gif|svg)$/,
@@ -121,6 +113,12 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    alias: {
+      "~": PATHS.src,
+      vue$: "vue/dist/vue.js"
+    }
   },
   plugins: [
     new VueLoaderPlugin(),
