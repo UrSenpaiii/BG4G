@@ -29,7 +29,7 @@ module.exports = {
     // module: `${PATHS.src}/module.js`,
   },
   output: {
-    filename: `${PATHS.assets}js/[name].[contenthash].js`,
+    filename: `${PATHS.assets}js/[name].[hash].js`,
     path: PATHS.dist,
     publicPath: "/"
   },
@@ -132,7 +132,7 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[contenthash].css`
+      filename: `${PATHS.assets}css/[name].[hash].css`
     }),
     new CopyWebpackPlugin([
       {from: `${PATHS.src}${PATHS.assets}img`, to: `${PATHS.assets}img`},
