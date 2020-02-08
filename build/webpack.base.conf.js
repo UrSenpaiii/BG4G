@@ -1,21 +1,19 @@
-/* Base config:
-   ========================================================================== */
-const path = require("path");
-const fs = require("fs");
+const path = require(`path`);
+const fs = require(`fs`);
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const {VueLoaderPlugin} = require("vue-loader");
 
-// Main const. Feel free to change it
+// Main const, free to change it
 const PATHS = {
   src: path.join(__dirname, "../src/"),
-  dist: path.join(__dirname, "../dist"),
+  dist: path.join(__dirname, "../dist/"),
   assets: "assets/"
 };
 
 // Pages const for HtmlWebpackPlugin
-const PAGES_DIR = `${PATHS.src}`;
+const PAGES_DIR = `${PATHS.src}pages/`;
 const PAGES = fs
   .readdirSync(PAGES_DIR)
   .filter(fileName => fileName.endsWith(".html"));
@@ -25,12 +23,12 @@ module.exports = {
   externals: {
     paths: PATHS
   },
+  //Main point
   entry: {
     app: PATHS.src
-    // module: `${PATHS.src}/module.js`,
   },
   output: {
-    filename: `${PATHS.assets}js/[name].[contenthash].js`,
+    filename: `${PATHS.assets}js/[name].[hash].js`,
     path: PATHS.dist,
     publicPath: "/"
   },
@@ -64,14 +62,6 @@ module.exports = {
           }
         }
       },
-      // {
-      //   // Fonts
-      //   test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-      //   loader: "file-loader",
-      //   options: {
-      //     alias: "[alias].[ext]"
-      //   }
-      // },
       {
         // images / icons
         test: /\.(png|jpg|gif|svg)$/,
@@ -133,27 +123,22 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[contenthash].css`
+      filename: `${PATHS.assets}css/[name].[hash].css`
     }),
     new CopyWebpackPlugin([
       {from: `${PATHS.src}${PATHS.assets}img`, to: `${PATHS.assets}img`},
       // {from: `${PATHS.src}${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`},
       {from: `${PATHS.src}static`, to: ""},
     ]),
+    new HtmlWebpackPlugin({
+      meta: Meta,
+      template: `${PATHS.src}index.html`,
+      filename: `index.html`,
+    }),
     ...PAGES.map(page => new HtmlWebpackPlugin({
       meta: Meta,
-      template: `${PAGES_DIR}/${page}`,
-      filename: `./${page}`,
+      template: `${PAGES_DIR}${page}`,
+      filename: `pages/${page}`,
     })),
-    new HtmlWebpackPlugin({
-      meta: Meta,
-      template: `${PAGES_DIR}/pages/catalog.html`,
-      filename: `./pages/catalog.html`,
-    }),
-    new HtmlWebpackPlugin({
-      meta: Meta,
-      template: `${PAGES_DIR}/pages/current.html`,
-      filename: `./pages/current.html`,
-    }),
   ]
 };

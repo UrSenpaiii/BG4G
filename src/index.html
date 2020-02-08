@@ -6,18 +6,19 @@
 </head>
 <body>
 <div id="app">
-  <header-comp>
-    <modal-form></modal-form>
-  </header-comp>
+  <v-header>
+    <v-modal-form></v-modal-form>
+  </v-header>
   <main>
-    <main-greet>
-      <canvas-comp slot="canvas"></canvas-comp>
+    <v-main-greetings>
+      <v-canvas slot="canvas"></v-canvas>
       <section slot="cards" class="container">
-        <index-card alias="c" type="0">
+        <v-index-card alias="c" type="0">
           Си — компилируемый статически типизированный язык программирования общего назначения. Это старичок в мире IT,
           но тем не менее у него всё ешще есть порох в пороховницах и он широко используется в desktop программах, а в
-          неготорых случаях на нем можно писать игры
-        </index-card>
+          неготорых случаях на нем можно писать игры.
+        </v-index-card>
+        <div>
         <!--<card alias="php" type="язык программирования">-->
           <!--PHP — это серверный язык программирования. Создан специально для бэкэнд-разработки. PHP популярен и проще для-->
           <!--новичков, чем большинство других серверных языков. Slack, Wikipedia, Вконтакте используют PHP-->
@@ -93,10 +94,11 @@
           <!--веб-приложений, а также обеспечивает их интеграцию с веб-сервером и сервером баз данных. Rails используют все-->
           <!--— от стартапов и некоммерческих организаций до крупного бизнеса-->
         <!--</card>-->
+        </div>
       </section>
-    </main-greet>
+    </v-main-greetings>
   </main>
-  <footer-comp></footer-comp>
+  <v-footer></v-footer>
 </div> <!-- end #app wrapper -->
 </body>
 </html>

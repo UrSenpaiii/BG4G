@@ -1,5 +1,3 @@
-// Development config
-
 const webpack = require("webpack");
 const merge = require("webpack-merge");
 const baseWebpackConfig = require("./webpack.base.conf");
@@ -7,13 +5,17 @@ const baseWebpackConfig = require("./webpack.base.conf");
 const devWebpackConfig = merge(baseWebpackConfig, {
   mode: "development",
   devtool: "cheap-module-eval-source-map",
+  watchOptions: {aggregateTimeout: 100},
   devServer: {
     contentBase: baseWebpackConfig.externals.paths.dist,
     port: 8081,
+    compress: true,
+    hot: true,
+    open: true,
     overlay: {
       warnings: true,
       errors: true
-    }
+    },
   },
   plugins: [
     new webpack.SourceMapDevToolPlugin({

@@ -2,10 +2,16 @@
   "alias": "webpacktemplate",
   "version": "1.0.0",
   "description": "My template",
+  "repository": {
+    "type": "git",
+    "url": "git+https://FiNaLiZee@bitbucket.org/FiNaLiZee/4greens.com"
+  },
+  "homepage": "https://bitbucket.org/FiNaLiZee/4greens.com",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
-    "build": "webpack --config ./build/webpack.build.conf.js"
+    "dev": "webpack-dev-server --config ./build/webpack.dev.conf.js",
+    "build": "rimraf dist && webpack --config ./build/webpack.build.conf.js",
+    "server": "node server.js"
   },
   "browserslist": [
     "> 1%",
@@ -14,9 +20,9 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.15.3",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
-    "lodash": "^4.17.15",
     "popper.js": "^1.16.0",
     "vue": "^2.6.11"
   },
@@ -34,12 +40,13 @@
     "node-sass": "^4.13.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^8.0.0",
-    "style-loader": "^1.1.2",
+    "style-loader": "^1.1.3",
     "vue-loader": "^15.8.3",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10",
+    "webpack-dev-middleware": "^1.12.0",
     "webpack-dev-server": "^3.10.1",
     "webpack-merge": "^4.2.2"
   }

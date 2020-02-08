@@ -26,9 +26,16 @@
             </div>
           </div>
         </div>
+<<<<<<< HEAD
         <!--Basic-->
         <div class="tab-pane fade" id="basics">
           <ul class="nav nav-tabs">
+=======
+        <!--Basics-->
+        <div class="tab-pane fade" id="basics">
+          <!--Tabs for basics-->
+          <ul class="nav nav-tabs" id="myTab">
+>>>>>>> ac8324d15522412c0409a076aa9a2b0fba3e9f8f
             <li class="nav-item">
               <a class="nav-link border-left-0" style="border-top-left-radius: 0;" data-toggle="tab"
                  href="#videos-basic">Videos</a>
@@ -38,6 +45,7 @@
             </li>
           </ul>
           <div class="tab-content">
+            <!--Videos-->
             <div class="tab-pane fade show active" id="videos-basic">
               <div class="card m-3 px-3" v-for="video in card.videos">
                 <div class="card-body">
@@ -56,6 +64,7 @@
                 </div>
               </div>
             </div>
+            <!--Books-->
             <div class="tab-pane fade" id="books-basic">
               <div class="card m-3 px-3" v-for="book in card.books">
                 <div class="card-body">
@@ -76,6 +85,7 @@
         </div>
         <!--Frameworks-->
         <div class="tab-pane fade" id="frameworks">
+          <!--Tabs for frameworks-->
           <ul class="nav nav-tabs">
             <li class="nav-item">
               <a class="nav-link active  border-left-0" style="border-top-left-radius: 0;" data-toggle="tab"
@@ -86,6 +96,7 @@
             </li>
           </ul>
           <div class="tab-content">
+            <!--Videos-->
             <div class="tab-pane fade show active" id="videos-frameworks">
               <div class="card m-3 px-3">
                 <div class="card-body">
@@ -107,6 +118,7 @@
                 </div>
               </div>
             </div>
+            <!--Books-->
             <div class="tab-pane fade" id="books-frameworks">
               <div class="card m-3 px-3">
                 <div class="card-body">
@@ -129,6 +141,7 @@
                 </div>
               </div>
             </div>
+            <!---->
           </div>
         </div>
       </div>
