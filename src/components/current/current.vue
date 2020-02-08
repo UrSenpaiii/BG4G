@@ -9,33 +9,28 @@
       </div>
       <!------------>
       <div class="tab-content col-10 p-0" v-for="card in contents">
+        <!--Main-->
         <div class="tab-pane fade show active" id="main">
           <div class="row">
             <div class="col-12 p-4">
-              <img class="float-left mr-2" :src="`/assets/img/currentImg/${card.alias}/${card.alias}.png`"
-                   width="500">
+              <img class="float-left mr-3" :src="`/assets/img/currentImg/${card.alias}/${card.alias}.png`" width="500">
               <ul class="list-group">
-                <li class="list-group-item text-capitalize h5">language: <span class="d-inline h4">
-                  {{card.title}}</span></li>
-                <li class="list-group-item text-capitalize h5">invented in: <span class="d-inline h4">
-                  {{card.invented}}</span></li>
-                <li class="list-group-item text-capitalize h5">Developer: <span class="d-inline h4">
-                  {{card.developer}}</span></li>
-                <li class="list-group-item text-capitalize h5">For what: <span class="d-inline h4">
-                  {{card.forWhat}}</span></li>
-                <li class="list-group-item text-capitalize h5" v-if="card.suitable === 'yes'">suitable for
-                  beginner: <span class="d-inline text-success h4">{{card.suitable}}</span></li>
-                <li class="list-group-item text-capitalize h5" v-else="card.suitable === 'no'">suitable for
-                  beginner: <span class="d-inline text-danger h4">{{card.suitable}}</span></li>
+                <li class="list-group-item text-capitalize h5">language: <span class="d-inline h4">{{card.title}}</span></li>
+                <li class="list-group-item text-capitalize h5">invented in: <span class="d-inline h4">{{card.invented}}</span></li>
+                <li class="list-group-item text-capitalize h5">Developer: <span class="d-inline h4">{{card.developer}}</span></li>
+                <li class="list-group-item text-capitalize h5">For what: <span class="d-inline h4">{{card.forWhat}}</span></li>
+                <li class="list-group-item text-capitalize h5" v-if="card.suitable === 'yes'">suitable for beginner: <span class="d-inline text-success h4">{{card.suitable}}</span></li>
+                <li class="list-group-item text-capitalize h5" v-else="card.suitable === 'no'">suitable for beginner: <span class="d-inline text-danger h4">{{card.suitable}}</span></li>
               </ul>
               <p class="mt-2">{{card.globalDescription}}</p>
             </div>
           </div>
         </div>
+        <!--Basic-->
         <div class="tab-pane fade" id="basics">
-          <ul class="nav nav-tabs" id="myTab">
+          <ul class="nav nav-tabs">
             <li class="nav-item">
-              <a class="nav-link active  border-left-0" style="border-top-left-radius: 0;" data-toggle="tab"
+              <a class="nav-link border-left-0" style="border-top-left-radius: 0;" data-toggle="tab"
                  href="#videos-basic">Videos</a>
             </li>
             <li class="nav-item">
@@ -67,9 +62,7 @@
                   <div class="row">
                     <img height="110" :src="`/assets/img/currentImg/${card.alias}/books/${book.alias}.png`">
                     <div class="col-6">
-                      <h3 class="text-capitalize">
-                        <a href="#">{{book.title}}</a>
-                      </h3>
+                        <a href="#" class="h3">{{book.title}}</a>
                       <h6 class="text-capitalize">Автор: {{book.author}}</h6>
                     </div>
                     <p class="text-muted">{{book.description | cut}}</p>
@@ -81,6 +74,7 @@
             </div>
           </div>
         </div>
+        <!--Frameworks-->
         <div class="tab-pane fade" id="frameworks">
           <ul class="nav nav-tabs">
             <li class="nav-item">
@@ -151,8 +145,8 @@
             alias: "c", title: "C",
             videos: [{
               alias: "c4hour",
-              title: "изучение си за час",
-              author: "гоша дударь",
+              title: "Изучение Си за час",
+              author: "Гоша Дударь",
               link: "https://www.youtube.com/watch?v=t0_IRViZcHs",
               description: "Данное видео предназначено для тех, что хочет пощупать Си не вникая в него, понравится или нет, стоит ли учить. Естественно ничего более видео вам не даст, вы не будете профи или человеком, который знает Си на уровне, как сказал автор. Но на русско-язычком YouTube'е это максимум что можно найти, язык слишком стар, что бы по нему снимали годные видосы. Зато литературы хоть отбавляй"
             },],
