@@ -16,7 +16,7 @@
       </section>
       <!---------->
       <slot name="canvas"></slot>
-      <!--<div class="col-12 my-5"><img src="assets/img/index-art.png" width="900"></div>-->
+      <!--<div class="col-12 my-5"><img src="/assets/img/index-art.png" width="900"></div>-->
       <!--Block start-->
       <section class="container-fluid bg-white">
         <div class="container">
@@ -32,8 +32,8 @@
               ты попал на нужный сайт. Сдесь собрана большая часть информации по многим, интересующим тебя темам.
             </div>
             <div class="col-6 d-flex justify-content-between py-4">
-              <a href="#"><img src="assets/img/books.svg" alt="books" height="160" width="160"></a>
-              <a href="#"><img src="assets/img/videos.svg" alt="books" height="160" width="160"></a>
+              <a href="#"><img src="/assets/img/books.svg" alt="books" height="160" width="160"></a>
+              <a href="#"><img src="/assets/img/videos.svg" alt="books" height="160" width="160"></a>
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@
               </p>
             </div>
             <div class="col-2 justify-content-start">
-              <img src="assets/img/why.png" width="115" height="230">
+              <img src="/assets/img/why.png" width="115" height="230">
             </div>
           </div>
         </div>

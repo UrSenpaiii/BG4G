@@ -17,7 +17,7 @@ const PAGES_DIR = `${PATHS.src}pages/`;
 const PAGES = fs
   .readdirSync(PAGES_DIR)
   .filter(fileName => fileName.endsWith(".html"));
-const Meta = {viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no\/n', 'Content-Security-Policy': { 'http-equiv': 'X-UA-Compatible', 'content': 'ie=edge' },};
+const Meta = {viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no', 'Content-Security-Policy': { 'http-equiv': 'X-UA-Compatible', 'content': 'ie=edge' },};
 
 module.exports = {
   externals: {
@@ -64,7 +64,7 @@ module.exports = {
       },
       {
         // images / icons
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpe?g|gif|svg)$/,
         loader: "file-loader",
         options: {
           alias: "[alias].[ext]"
@@ -127,16 +127,16 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       {from: `${PATHS.src}${PATHS.assets}img`, to: `${PATHS.assets}img`},
-      // {from: `${PATHS.src}${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`},
       {from: `${PATHS.src}static`, to: ""},
     ]),
     new HtmlWebpackPlugin({
       meta: Meta,
+      favicon: `${PATHS.src}static/favicon.ico`,
       template: `${PATHS.src}index.html`,
-      filename: `index.html`,
     }),
     ...PAGES.map(page => new HtmlWebpackPlugin({
       meta: Meta,
+      favicon: `${PATHS.src}static/favicon.ico`,
       template: `${PAGES_DIR}${page}`,
       filename: `pages/${page}`,
     })),

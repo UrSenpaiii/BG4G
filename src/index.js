@@ -1,6 +1,3 @@
-// CSS
-import './assets/css/main.css'
-
 // SCSS
 import './assets/scss/index.scss'
 
