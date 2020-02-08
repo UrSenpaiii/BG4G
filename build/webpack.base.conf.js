@@ -17,7 +17,7 @@ const PAGES_DIR = `${PATHS.src}pages/`;
 const PAGES = fs
   .readdirSync(PAGES_DIR)
   .filter(fileName => fileName.endsWith(".html"));
-const Meta = {viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no', 'Content-Security-Policy': { 'http-equiv': 'X-UA-Compatible', 'content': 'ie=edge' },};
+const Meta = {viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no\/n', 'Content-Security-Policy': { 'http-equiv': 'X-UA-Compatible', 'content': 'ie=edge' },};
 
 module.exports = {
   externals: {

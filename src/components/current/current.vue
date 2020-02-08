@@ -26,16 +26,10 @@
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         <!--Basic-->
-        <div class="tab-pane fade" id="basics">
-          <ul class="nav nav-tabs">
-=======
-        <!--Basics-->
         <div class="tab-pane fade" id="basics">
           <!--Tabs for basics-->
           <ul class="nav nav-tabs" id="myTab">
->>>>>>> ac8324d15522412c0409a076aa9a2b0fba3e9f8f
             <li class="nav-item">
               <a class="nav-link border-left-0" style="border-top-left-radius: 0;" data-toggle="tab"
                  href="#videos-basic">Videos</a>
