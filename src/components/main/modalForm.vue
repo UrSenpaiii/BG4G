@@ -93,8 +93,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../assets/scss/utils/vars";
-
   @mixin icon-bg($icon, $ml, $size) {
     padding-left: 40px;
     background: url(#{$img-path}icons/#{$icon}.png) $ml center / $size no-repeat;

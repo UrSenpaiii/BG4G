@@ -98,8 +98,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../assets/scss/utils/vars";
-
   .bg-custom {
     background-color: $neutral-custom
   }

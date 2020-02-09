@@ -185,8 +185,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../assets/scss/utils/vars";
-
   .h4 {
     font-weight: $mainFontWeight;
   }

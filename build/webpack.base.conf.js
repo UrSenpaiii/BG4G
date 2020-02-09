@@ -90,6 +90,14 @@ module.exports = {
           {
             loader: "sass-loader",
             options: {sourceMap: true}
+          },
+          {
+            loader: 'style-resources-loader',
+            options: {
+              patterns: [
+                `${PATHS.src}${PATHS.assets}/scss/utils/*.scss`,
+              ]
+            }
           }
         ]
       },
