@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg navbar-light" @click="bus.$emit('click');">
         <a class="navbar-brand" href="/"><img src="/assets/img/logo.png" alt="logo"></a>
         <!--media btn-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">

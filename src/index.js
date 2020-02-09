@@ -15,6 +15,8 @@ import './js/'
 // Vue.js
 window.Vue = require('vue');
 
+Vue.prototype.bus = global.bus = new Vue();
+
 const components = require.context("./", true, /\w+\.(vue)$/);
 components.keys().forEach(filename => {
   const config = components(filename);
