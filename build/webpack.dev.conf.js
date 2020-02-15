@@ -8,6 +8,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   watchOptions: {aggregateTimeout: 100},
   devServer: {
     contentBase: baseWebpackConfig.externals.paths.dist,
+    inline: true,
+    host: "localhost",
+    watchOptions: {
+      poll: true
+    },
     port: 8081,
     compress: true,
     hot: true,
