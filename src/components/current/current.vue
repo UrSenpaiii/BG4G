@@ -8,7 +8,7 @@
         <a class="nav-link" data-toggle="pill" href="#frameworks">Frameworks</a>
       </div>
       <!------------>
-      <div class="tab-content col-10 p-0" v-for="card in contents">
+      <div class="tab-content col-10 p-0" >
         <!--Main-->
         <div class="tab-pane fade show active" id="main">
           <div class="row">
@@ -31,8 +31,7 @@
           <!--Tabs for basics-->
           <ul class="nav nav-tabs" id="myTab">
             <li class="nav-item">
-              <a class="nav-link border-left-0" style="border-top-left-radius: 0;" data-toggle="tab"
-                 href="#videos-basic">Videos</a>
+              <a class="nav-link border-left-0 active" style="border-top-left-radius: 0;" data-toggle="tab" href="#videos-basic">Videos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" data-toggle="tab" href="#books-basic">Books</a>
@@ -44,12 +43,10 @@
               <div class="card m-3 px-3" v-for="video in card.videos">
                 <div class="card-body">
                   <div class="row">
-                    <img width="150" :src="`/assets/img/currentImg/${card.alias}/videos/${video.alias}.png`">
+                    <img width="200" class="border" :src="`/assets/img/currentImg/${card.alias}/videos/${video.alias}.png`">
                     <div class="col-6">
-                      <h3 class="text-capitalize">
-                        <a href="">{{video.title}}</a>
-                      </h3>
-                      <h6 class="text-capitalize">Автор: {{video.author}}</h6>
+                      <a href="#" class="h3">{{video.title}}</a>
+                      <div class="text-capitalize h5 mt-2">Автор: {{video.author}}</div>
                     </div>
                     <p class="text-muted">{{video.description | cut}}</p>
                     <a class="btn btn-dark" href="#">Узнать
@@ -63,10 +60,10 @@
               <div class="card m-3 px-3" v-for="book in card.books">
                 <div class="card-body">
                   <div class="row">
-                    <img height="110" :src="`/assets/img/currentImg/${card.alias}/books/${book.alias}.png`">
+                    <img width="120" class="border" :src="`/assets/img/currentImg/${card.alias}/books/${book.alias}.png`">
                     <div class="col-6">
-                        <a href="#" class="h3">{{book.title}}</a>
-                      <h6 class="text-capitalize">Автор: {{book.author}}</h6>
+                      <a href="#" class="h3">{{book.title}}</a>
+                      <div class="text-capitalize h5 mt-2">Автор: {{book.author}}</div>
                     </div>
                     <p class="text-muted">{{book.description | cut}}</p>
                     <a class="btn btn-dark" href="#">Узнать
@@ -129,8 +126,7 @@
                       новичков, чем большинство других серверных языков. Slack, Wikipedia, Вконтакте
                       используют PHP.
                     </p>
-                    <a class="btn btn-dark" href="">Узнать
-                      больше</a>
+                    <a class="btn btn-dark" href="">Узнать больше</a>
                   </div>
                 </div>
               </div>
@@ -148,8 +144,7 @@
     props: [],
     data() {
       return {
-        contents: {
-          c: {
+          card: {
             alias: "c", title: "C",
             videos: [{
               alias: "c4hour",
@@ -160,7 +155,7 @@
             },],
             books: [{
               alias: "programmingOnC4beginners",
-              title: "программирование на c для начинающих",
+              title: "Программирование на Си для начинающих",
               author: "Майк МакГрат",
               dateOfPub: 2016,
               link: "",
@@ -178,7 +173,6 @@
             "Конечно, с помощью C можно изучать основы программирования и не изучать при этом указатели. Однако человек будет думать, что знает C, мало зная о нем по существу. Язык C был создан разбирающимися в устройстве «железа» профессиональными программистами для написания операционной системы UNIX. Его не задумывали как язык для обучения начинающих. Но это не значит, что с него нельзя начать, можно начать с чего угодно.",
             type: 1,
           },
-        }
       }
     }
   }

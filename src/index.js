@@ -25,6 +25,10 @@ components.keys().forEach(filename => {
   console.log(filename, "mapped by", "v-" + name);
 });
 
+Vue.filter('cut', function (text) {
+  return text.slice(0, 210) + "...";
+});
+
 const app = new Vue({
   el: '#app',
   filter: {
