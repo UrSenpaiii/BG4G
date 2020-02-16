@@ -3,7 +3,7 @@
     <div class="card-body">
       <div class="row">
         <img width="200" class="border"
-             :src="`/assets/img/currentImg/${lang}/videos/${alias}.png`">
+             :src="`/assets/img/currentImg/${alias}/videos/${card_alias}.png`">
         <div class="col-6">
           <a href="#" class="h3">{{title}}</a>
           <div class="text-capitalize h5 mt-2">Автор: {{author}}</div>
@@ -20,7 +20,7 @@
 <script>
   export default {
     props: {
-      lang: String, alias: String, title: String, author: String,
+      alias: String, card_alias: String, title: String, author: String,
     },
     data() {
       return {

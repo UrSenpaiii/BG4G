@@ -21,9 +21,7 @@
               <a class="nav-link disabled" href="#" aria-disabled="true">Forum</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">
-                Help
-              </a>
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">Help</a>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">FAQ</a>
                 <a class="dropdown-item" href="#">About as</a>

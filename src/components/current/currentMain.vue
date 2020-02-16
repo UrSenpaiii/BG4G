@@ -1,6 +1,6 @@
 <template>
   <div class="col-12 p-4">
-    <img width="500" class="float-left mr-3" :src="`/assets/img/currentImg/${lang}/main.png`">
+    <img width="500" class="float-left mr-3" :src="`/assets/img/currentImg/${alias}/main.png`">
     <ul class="list-group">
       <li class="list-group-item text-capitalize h5">language: <span class="d-inline h4">{{title}}</span></li>
       <li class="list-group-item text-capitalize h5">invented in: <span class="d-inline h4">{{invented}}</span></li>
@@ -18,15 +18,15 @@
 <script>
   export default {
     props: {
-      lang: String, title: String, invented: String, developer: String, for_what: String, suitable: Boolean,
+      alias: String, title: String, invented: String, developer: String, for_what: String, suitable: Boolean,
     },
     mounted() {
       if (this.suitable) {
         this.suit = "yes";
-        document.getElementById('suitable').classList.add("text-success")
+        $('#suitable').classList.add("text-success")
       } else {
         this.suit = "no";
-        document.getElementById('suitable').classList.add("text-danger")
+        $('#suitable').classList.add("text-danger")
       }
     },
     data() {
