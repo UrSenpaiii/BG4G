@@ -11,9 +11,9 @@
           <div>
             <a href="#">Видео: <b>{{videos}}</b> шт.</a>
             <br>
-            <a href="#">Книги:<b>{{books}}</b> шт.</a>
+            <a href="#">Книги: <b>{{books}}</b> шт.</a>
             <br>
-            <a href="/pages/current.html" class="btn btn-dark btn-block mt-3" @click="">Дай посмотрю</a>
+            <a href="/pages/current.html" class="btn btn-dark btn-block mt-3">Дай посмотрю</a>
           </div>
         </div>
       </div>
