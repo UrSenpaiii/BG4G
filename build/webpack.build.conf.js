@@ -16,49 +16,50 @@ const buildWebpackConfig = merge(baseWebpackConfig, {
       },
     }),
   ],
-  rules: [{
-    test: /\.(gif|png|jpe?g|svg)$/i,
-    use: [
-      'file-loader',
-      {
-        loader: 'image-webpack-loader',
-        options: {
-          mozjpeg: {
-            progressive: true,
-            quality: 65
-          },
-          // optipng.enabled: false will disable optipng
-          optipng: {
-            enabled: false,
-          },
-          pngquant: {
-            quality: [0.65, 0.90],
-            speed: 4
-          },
-          gifsicle: {
-            interlaced: false,
-          },
-          webp: {
-            quality: 75
-          },
-          svgo: {
-            removeEmptyContainers: true,
-            removeViewBox: true,
-            removeEmptyText: true,
-            removeHiddenElems: true,
-            removeEmptyAttrs: true,
-            convertStyleToAttrs: true,
-            removeTitle: true,
-            removeMetadata: true,
-            removeComments: true,
-            removeDoctype: true,
-            inlineStyles: true,
+  module: {
+    rules: [{
+      test: /\.(gif|png|jpe?g|svg)$/i,
+      use: [
+        'file-loader',
+        {
+          loader: 'image-webpack-loader',
+          options: {
+            mozjpeg: {
+              progressive: true,
+              quality: 65
+            },
+            // optipng.enabled: false will disable optipng
+            optipng: {
+              enabled: false,
+            },
+            pngquant: {
+              quality: [0.65, 0.90],
+              speed: 4
+            },
+            gifsicle: {
+              interlaced: false,
+            },
+            webp: {
+              quality: 75
+            },
+            svgo: {
+              removeEmptyContainers: true,
+              removeViewBox: true,
+              removeEmptyText: true,
+              removeHiddenElems: true,
+              removeEmptyAttrs: true,
+              convertStyleToAttrs: true,
+              removeTitle: true,
+              removeMetadata: true,
+              removeComments: true,
+              removeDoctype: true,
+              inlineStyles: true,
+            }
           }
-        }
-      },
-    ],
-  }]
-
+        },
+      ],
+    }]
+  },
 });
 
 module.exports = new Promise((resolve) => {

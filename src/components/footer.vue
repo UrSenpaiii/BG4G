@@ -84,7 +84,7 @@
       </li>
     </ul>
     <div class="footer-copyright text-center py-3 bg-custom">© 2020 Copyright:
-      <a href="https://BG4G.boots/" class="underlined">BG4G.boots</a>
+      <a href="https://BG4G.boots/" class="underlined">BG4G.com</a>
     </div>
   </footer>
 </template>

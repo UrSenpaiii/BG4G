@@ -11,7 +11,7 @@
         <div class="text-muted my-2">
           <slot name="description"></slot>
         </div>
-        <a class="btn btn-dark" href="#">Узнать больше</a>
+        <a class="btn btn-dark" href="/pages/article.html">Узнать больше</a>
       </div>
     </div>
   </div>

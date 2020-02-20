@@ -1,13 +1,16 @@
+//  Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+// Vue.js
+window.Vue = require('vue');
+
+// BootstrapVue
+import {BootstrapVue} from 'bootstrap-vue'
+Vue.use(BootstrapVue);
+
 // SCSS
 import './assets/scss/index.scss'
-
-// Bootstrap JS
-import 'jquery'
-import 'popper.js'
-import 'bootstrap'
-
-//  Bootstrap CSS
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 // JS
 import './js/'
@@ -18,13 +21,10 @@ global.$ = function (selector, startNode) {
   let pref = selector[0], value = selector.substr(1);
   if (pref === "#") return node.getElementById(value);
   else if (pref === "^") return node.getElementsByName(value);
-  else if (pref === ".") return node.getElementsByClassName(value);
+  else if (pref === ".") return node.getElementsByClassName( value);
   else if (pref === "@") return node.getElementsByTagName(value);
   else return node.getElementById(selector);
 };
-
-// Vue.js
-window.Vue = require('vue');
 
 Vue.prototype.bus = global.bus = new Vue();
 
