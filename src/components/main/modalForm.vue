@@ -12,13 +12,12 @@
           up</a>
       </li>
     </ul>
-    <!--Login-->
+    <!--Modal-->
     <transition name="modal-fade">
     <div class="modal-backdrop" v-if="showModal" @click="close()"></div>
     </transition>
     <transition name="modal-fade">
-    <div class="v-modal" v-if="showModal">
-      <div class="modal-dialog">
+      <div class="v-modal" v-if="showModal">
         <div class="modal-content">
           <div class="modal-header">
             <div class="modal-title h4">{{modalTitle}}</div>
@@ -58,7 +57,6 @@
           </div>
         </div>
       </div>
-    </div>
     </transition>
     <!--##########-->
   </div>

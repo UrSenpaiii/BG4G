@@ -1,6 +1,7 @@
 //  Bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'jquery'
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Vue.js
 window.Vue = require('vue');
@@ -21,7 +22,7 @@ global.$ = function (selector, startNode) {
   let pref = selector[0], value = selector.substr(1);
   if (pref === "#") return node.getElementById(value);
   else if (pref === "^") return node.getElementsByName(value);
-  else if (pref === ".") return node.getElementsByClassName( value);
+  else if (pref === ".") return node.getElementsByClassName(value);
   else if (pref === "@") return node.getElementsByTagName(value);
   else return node.getElementById(selector);
 };
