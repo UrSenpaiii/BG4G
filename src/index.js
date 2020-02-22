@@ -6,7 +6,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 window.Vue = require('vue');
 
 // BootstrapVue
-import {BootstrapVue} from 'bootstrap-vue'
+import {BootstrapVue, BootstrapVueIcons} from 'bootstrap-vue'
 Vue.use(BootstrapVue);
 
 // SCSS
