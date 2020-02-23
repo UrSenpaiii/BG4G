@@ -6,10 +6,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // Vue.js
 window.Vue = require('vue');
 
-// BootstrapVue
-import {BootstrapVue, BootstrapVueIcons} from 'bootstrap-vue'
-Vue.use(BootstrapVue);
-
 // SCSS
 import './assets/scss/index.scss'
 

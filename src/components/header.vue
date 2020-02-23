@@ -3,12 +3,11 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light" @click="bus.$emit('click');">
         <a class="navbar-brand" href="/"><img src="/assets/img/logo.png" alt="logo"></a>
-        <!--media btn-->
+        <!--Media btn-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <!--#########-->
-        <!--header list-->
+        <!--Header List-->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
@@ -29,8 +28,7 @@
               </div>
             </li>
           </ul>
-          <!--############-->
-          <!--search block-->
+          <!--Search Block-->
           <form class="form-inline input-group search-block-weight mr-4">
             <input type="search" class="form-control border-dark search-block-height" placeholder="Search">
             <div class="input-group-append">
@@ -39,16 +37,6 @@
           </form>
           <!--############-->
           <slot></slot>
-          <div>
-            <b-dropdown id="dropdown-1" text="Dropdown Button" class="m-md-2">
-              <b-dropdown-item>First Action</b-dropdown-item>
-              <b-dropdown-item>Second Action</b-dropdown-item>
-              <b-dropdown-item>Third Action</b-dropdown-item>
-              <b-dropdown-divider></b-dropdown-divider>
-              <b-dropdown-item active>Active action</b-dropdown-item>
-              <b-dropdown-item disabled>Disabled action</b-dropdown-item>
-            </b-dropdown>
-          </div>
         </div>
       </nav>
     </div>
