@@ -20,7 +20,7 @@
       <div class="v-modal" v-if="showModal">
         <div class="modal-content">
           <div class="modal-header">
-            <div class="modal-title h4">{{modalTitle}}</div>
+            <h4 class="modal-title">{{modalTitle}}</h4>
             <button type="button" class="close" @click="close()">&times;</button>
           </div>
           <div class="modal-body">

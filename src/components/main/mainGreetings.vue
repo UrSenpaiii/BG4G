@@ -3,8 +3,8 @@
     <div class="row justify-content-center">
       <!--Greets-->
       <section class="col-12 align-self-center">
-        <div class="my-3 h2">Начни кодить уже сейчас, сидя дома</div>
-        <div class="mb-3 h5 font-weight-light">жми на кнопку ниже и погнали</div>
+        <h2 class="my-3">Начни кодить уже сейчас, сидя дома</h2>
+        <h5 class="mb-3 font-weight-light">жми на кнопку ниже и погнали</h5>
         <div class="row justify-content-center">
           <div class="col-4">
             <a class="btn btn-dark btn-lg btn-block" href="#">Хочу стать хацкером!</a>
@@ -22,7 +22,7 @@
         <div class="container">
           <div class="row mb-4">
             <div class="col-12 text-center">
-              <div class="font-weight-light h2">Что ты найдешь на сайте?</div>
+              <h2 class="font-weight-light">Что ты найдешь на сайте?</h2>
             </div>
           </div>
           <div class="row justify-content-center">
@@ -43,8 +43,8 @@
       <section class="container">
         <div class="row">
           <div class="col-12 text-center">
-            <div class="font-weight-light h2">Языки программирования</div>
-            <div class="font-weight-light h5">и не только</div>
+            <h2 class="font-weight-light">Языки программирования</h2>
+            <h5 class="font-weight-light">и не только</h5>
           </div>
         </div>
       <!--Cards-->
@@ -57,7 +57,7 @@
         <div class="container">
           <div class="row justify-content-center px-4">
             <div class="col-7 text-center">
-              <div class="font-weight-light h2">Без понятия что учить?</div>
+              <h2 class="font-weight-light">Без понятия что учить?</h2>
               <p>
                 Тогда <a href="#" class="underlined">вот страница</a>, на которой тебе всё
                 объяснят

@@ -25,7 +25,7 @@
             <!--Current Title-->
             <div class="d-flex justify-content-between">
               <div class="btn btn-outline-dark h4"><</div>
-              <div class="h3">TITLE</div>
+              <h3>TITLE</h3>
               <div class="btn btn-outline-dark h4">></div>
             </div>
             <!--Item Preview-->

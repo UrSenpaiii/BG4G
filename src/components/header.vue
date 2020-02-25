@@ -2,7 +2,7 @@
   <header>
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light" @click="bus.$emit('click');">
-        <a class="navbar-brand" href="/"><img src="/assets/img/logo.png" alt="logo"></a>
+        <h1><a class="navbar-brand" href="/"><img src="/assets/img/logo.png" alt="logo"></a></h1>
         <!--Media btn-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
           <span class="navbar-toggler-icon"></span>

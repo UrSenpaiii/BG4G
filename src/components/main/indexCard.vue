@@ -3,9 +3,9 @@
     <div class="card-body p-5">
       <div class="row">
         <div class="col-8"><a href="#" class="text-uppercase">{{name}}</a>
-          <div class="h2 mb-3 mt-1 text-capitalize">
+          <h2 class="mb-3 mt-1 text-capitalize">
             <a href="/pages/current.html">{{alias}}</a>
-          </div>
+          </h2>
           <p class="text-muted">
             <slot></slot>
           </p>
