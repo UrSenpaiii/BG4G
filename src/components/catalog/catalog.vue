@@ -1,16 +1,14 @@
 <template>
   <section class="container">
-    <div class="row bg-white row d-flex justify-content-between p-3">
-      <div class="pl-3">
-        <div class="h3" v-if="selected === ''">All</div>
-        <div class="h3" v-else-if="selected === 1">Program languages</div>
-        <div class="h3" v-else-if="selected === 2">Frameworks</div>
-        <div class="h3" v-else-if="selected === 3">OS</div>
-        <div class="h3" v-else-if="selected === 4">Text Editors</div>
-        <div class="h3" v-else-if="selected === 5">Other</div>
-      </div>
+    <main class="row bg-white justify-content-between p-4">
+      <h3 v-if="selected === ''">All</h3>
+      <h3 v-else-if="selected === 1">Program languages</h3>
+      <h3 v-else-if="selected === 2">Frameworks</h3>
+      <h3 v-else-if="selected === 3">OS</h3>
+      <h3 v-else-if="selected === 4">Text Editors</h3>
+      <h3 v-else-if="selected === 5">Other</h3>
       <div class="form-group">
-        <label class="pr-3">
+        <label>
           <select v-model="selected" class="form-control">
             <option disabled value="">Choose category</option>
             <option v-for="option in options" :value="option.value">
@@ -19,10 +17,10 @@
           </select>
         </label>
       </div>
-      <div class="row col-12 m-0 p-0 ">
+      <div class="row col-12">
         <slot></slot>
       </div>
-    </div>
+    </main>
   </section>
 </template>
 

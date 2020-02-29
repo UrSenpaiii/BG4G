@@ -1,19 +1,16 @@
 <template>
-  <section class="container w-100">
+  <section class="container">
     <article class="row">
       <!--Tabs bar-->
-      <div class="nav flex-column nav-pills col-2 p-0 border-right">
+      <aside class="nav flex-column col-2 p-0 border-right">
         <a class="nav-link active" data-toggle="pill" href="#main">Main</a>
         <a class="nav-link" data-toggle="pill" href="#basics">Basics</a>
         <a class="nav-link" data-toggle="pill" href="#frameworks">Frameworks</a>
-      </div>
-      <!------------>
+      </aside>
       <div class="tab-content col-10 p-0">
         <!--Main-->
         <div class="tab-pane fade show active" id="main">
-          <div class="row">
-            <slot name="main"></slot>
-          </div>
+          <slot name="main"></slot>
         </div>
         <!--Basic-->
         <div class="tab-pane fade" id="basics">

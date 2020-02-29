@@ -8,18 +8,15 @@
 </head>
 <body>
 <div id="app">
-  <header>
-    <v-header>
-      <v-modal-form></v-modal-form>
-    </v-header>
-  </header>
-  <main>
-    <v-catalog>
-      <v-catalog-card alias="c" title="C" :videos="2" :books="3"></v-catalog-card>
-    </v-catalog>
-  </main>
+  <v-header>
+    <v-modal-form></v-modal-form>
+  </v-header>
+  <v-catalog>
+    <v-catalog-card alias="c" title="C" :videos="2" :books="3"></v-catalog-card>
+    <v-catalog-card alias="c" title="C" :videos="2" :books="3"></v-catalog-card>
+  </v-catalog>
   <v-footer></v-footer>
-</div> <!-- end #app wrapper -->
+</div>
 </body>
 <script src="https://kit.fontawesome.com/a7113a2019.js" crossorigin="anonymous"></script>
 </html>

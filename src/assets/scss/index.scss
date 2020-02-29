@@ -4,6 +4,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 ul, li {
   list-style-type: none;
 }
@@ -23,8 +27,6 @@ textarea {
 input, textarea, select, button {
   outline: none;
   border: none;
-  font-size: 100%;
-  margin: 0;
 }
 
 html {
@@ -67,9 +69,9 @@ body {
   background: $neutral-background;
 }
 
-header, article, aside {
+header, article, main {
   background: $default-color;
-  box-shadow: $box-shadow;
+  box-shadow: $custom-box-shadow;
 }
 
 footer {
