@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <article class="row">
+    <main class="row">
       <!--Tabs bar-->
       <aside class="nav flex-column col-2 p-0 border-right">
         <a class="nav-link active" data-toggle="pill" href="#main">Main</a>
@@ -58,7 +58,7 @@
           </div>
         </div>
       </div>
-    </article>
+    </main>
   </section>
 </template>
 

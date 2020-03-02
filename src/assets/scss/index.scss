@@ -69,7 +69,7 @@ body {
   background: $neutral-background;
 }
 
-header, article, main {
+header, main {
   background: $default-color;
   box-shadow: $custom-box-shadow;
 }
@@ -94,4 +94,10 @@ a {
 
 button, .btn, .btn-block {
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out
+}
+
+.lighter-icon:hover {
+  color: $neutral-regular;
+  transition: .15s;
+  cursor: pointer;
 }

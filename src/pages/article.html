@@ -9,7 +9,34 @@
   <v-header>
     <v-modal-form></v-modal-form>
   </v-header>
-  <v-article></v-article>
+  <v-article>
+    <v-sitemap slot="sitemap">
+
+    </v-sitemap>
+    <v-carousel-item slot="carouselItem">
+      <v-carousel-card slot="carouselCard" title="Lang Title" author="Roberto Dovinchy"></v-carousel-card>
+    </v-carousel-item>
+    <v-comment slot="comment" user_name="Shipe" comment_data="17 Mar 2021" :rates="[3, 1]" :answers="1">
+      <p slot="commentText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A corporis laudantium vitae. Aliquam consequuntur deleniti iure,
+        minus odit optio quisquam quod ratione, rem, repellat voluptatem?</p>
+      <v-comment slot="answers" user_name="Aliones" comment_data="17 Mar 2021" :rates="[2, 0]">
+        <p slot="commentText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aperiam asperiores, aspernatur at dolorem
+          explicabo fuga illo incidunt mollitia odio tempora tenetur veritatis vitae!</p>
+      </v-comment>
+      <v-comment slot="answers" user_name="KOSE" comment_data="3 Feb 14:19" :rates="[0, 0]" :answers="1">
+        <p slot="commentText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cumque distinctio, excepturi facilis ipsa ipsum natus
+          nesciunt nihil sapiente sunt temporibus totam voluptatem, voluptatum? Atque?</p>
+        <v-comment slot="answers" user_name="Vani1a" comment_data="4 Apr 12:41" :rates="[0, 6]">
+          <p slot="commentText">ssssssLorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur, culpa, doloribus ducimus fugit illum in
+            labore nam officiis quae quam, rem sequi sunt voluptate!</p>
+        </v-comment>
+      </v-comment>
+    </v-comment>
+    <v-comment slot="comment" user_name="Gomoffy" comment_data="14 Mar 2021" :rates="[0, 0]">
+      <p slot="commentText">Hi bitches! How its going? Missed? No? Why? I mossed u so much (No, I didn't :)</p>
+    </v-comment>
+
+  </v-article>
   <v-footer></v-footer>
 </div>
 </body>
