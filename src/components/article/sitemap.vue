@@ -1,20 +1,38 @@
 <template>
   <div>
-    <li class="sitemap-list-item"><i class="fas fa-folder lighter-icon"></i> <a href="#">Cras justo odio</a></li>
-    <ul class="list-block">
-      <li class="sitemap-list-item"><i class="fas fa-folder-open lighter-icon"></i> <a href="#">Lorem ipsum dolor sit.</a></li>
-      <ul class="sub-list">
-        <li class="sitemap-list-item"><i class="fas fa-folder lighter-icon"></i> <a href="#">Cras justo odio</a></li>
-        <li class="sitemap-list-item"><i class="fas fa-folder lighter-icon"></i> <a href="#">Lorem ipsum dolor</a></li>
-      </ul>
+    <li class="sitemap-list-item"><i :class="iconsColor + ' fa-folder lighter-icon'" @click="showSubBlock(this)"></i> <a :href="link">
+      <slot name="sitemapItemText"></slot>
+    </a></li>
+    <ul class="sub-list" v-if="sub && showSub">
+      <slot name="sub-item"></slot>
     </ul>
   </div>
 </template>
 
 <script>
   export default {
+    props: {
+      sub: Boolean,
+      link: {
+        type: String,
+        default: "#"
+        // required: true
+      }
+    },
     data() {
-      return {}
+      return {
+        showSub: false,
+        iconsColor: null
+      }
+    },
+    mounted: function () {
+      this.sub ? this.iconsColor = "fas" : this.iconsColor = "far"
+    },
+    methods: {
+      showSubBlock(e) {
+        this.showSub = !this.showSub;
+        if (this.sub) event.target.classList.toggle("fa-folder-open");
+      }
     }
   }
 </script>

@@ -11,11 +11,19 @@
   </v-header>
   <v-article>
     <v-sitemap slot="sitemap">
-
+      <span slot="sitemapItemText">Lorem ipsum dolor.</span>
     </v-sitemap>
+    <v-sitemap slot="sitemap" :sub="true">
+      <span slot="sitemapItemText">Lorem ipsum dolor.</span>
+      <v-sitemap slot="sub-item">
+        <span slot="sitemapItemText">Lorem ipsum dolor.</span>
+      </v-sitemap>
+    </v-sitemap>
+
     <v-carousel-item slot="carouselItem">
       <v-carousel-card slot="carouselCard" title="Lang Title" author="Roberto Dovinchy"></v-carousel-card>
     </v-carousel-item>
+
     <v-comment slot="comment" user_name="Shipe" comment_data="17 Mar 2021" :rates="[3, 1]" :answers="1">
       <p slot="commentText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A corporis laudantium vitae. Aliquam consequuntur deleniti iure,
         minus odit optio quisquam quod ratione, rem, repellat voluptatem?</p>
@@ -27,7 +35,8 @@
         <p slot="commentText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cumque distinctio, excepturi facilis ipsa ipsum natus
           nesciunt nihil sapiente sunt temporibus totam voluptatem, voluptatum? Atque?</p>
         <v-comment slot="answers" user_name="Vani1a" comment_data="4 Apr 12:41" :rates="[0, 6]">
-          <p slot="commentText">ssssssLorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur, culpa, doloribus ducimus fugit illum in
+          <p slot="commentText">ssssssLorem ipsum dolor sit amet, consectetur adipisicing elit. Autem consectetur, culpa, doloribus ducimus fugit
+            illum in
             labore nam officiis quae quam, rem sequi sunt voluptate!</p>
         </v-comment>
       </v-comment>

@@ -14,7 +14,7 @@
     </ul>
     <!--Modal-->
     <transition name="modal-fade">
-    <div class="modal-backdrop" v-if="showModal" @click="close()"></div>
+      <div class="modal-backdrop" v-if="showModal" @click="close()"></div>
     </transition>
     <transition name="modal-fade">
       <div class="v-modal" v-if="showModal">
@@ -27,7 +27,8 @@
             <form method="post" action="">
               <div class="form-group">
                 <label for="SignUpLogin" class="h5">Login</label>
-                <input type="text" id="SignUpLogin" class="form-control login-ico" name="username" :placeholder="'Enter login' + loginPlaceholder" required>
+                <input type="text" id="SignUpLogin" class="form-control login-ico" name="username" :placeholder="'Enter login' + loginPlaceholder"
+                       required>
               </div>
               <div class="form-group" v-if="modalTitle === 'Sign up'">
                 <label for="email">Email address</label>
@@ -39,7 +40,8 @@
                   <i class="ico-pos fas fa-eye" id="showPass" @click="showPas"></i>
                   <input type="password" class="form-control password-ico" id="password1" name="password1" placeholder="Enter password" required>
                 </div>
-                <input type="password" v-if="modalTitle === 'Sign up'" class="form-control password-ico" id="password2" name="password2" placeholder="Enter password again" required>
+                <input type="password" v-if="modalTitle === 'Sign up'" class="form-control password-ico" id="password2" name="password2"
+                       placeholder="Enter password again" required>
               </div>
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
@@ -77,16 +79,16 @@
         this.showModal = !this.showModal;
       },
       showPas() {
-      if (this.showPass) {
-        document.getElementById('showPass').className = 'ico-pos fas fa-eye-slash';
-        document.getElementById('password1').type = 'text';
-      } else {
-        document.getElementById('showPass').className = 'ico-pos fas fa-eye';
-        document.getElementById('password1').type = 'password';
+        if (this.showPass) {
+          $('showPass').className = 'ico-pos fas fa-eye-slash';
+          $('password1').type = 'text';
+        } else {
+          $('showPass').className = 'ico-pos fas fa-eye';
+          $('password1').type = 'password';
+        }
+        this.showPass = !this.showPass;
       }
-      this.showPass = !this.showPass;
     }
-  }
   }
 </script>
 

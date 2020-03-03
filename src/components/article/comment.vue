@@ -73,13 +73,33 @@
         this.showAnswers ? this.btnArrow = "up" : this.btnArrow = "down"
       },
       rateComment(i) {
-          if (status === false) {
-            this.item++;
-            this.status = true
+        if (i) {
+          if (this.dislikeRated && !this.likeRated) {
+            this.like++;
+            this.dislike--;
+            this.likeRated = true;
+            this.dislikeRated = false
+          } else if (!this.likeRated) {
+            this.like++;
+            this.likeRated = true
           } else {
-            this.item--;
-            this.status = false
+            this.like--;
+            this.likeRated = false
           }
+        } else {
+          if (this.likeRated && !this.dislikeRated) {
+            this.dislike++;
+            this.like--;
+            this.likeRated = false;
+            this.dislikeRated = true;
+          } else if (!this.dislikeRated) {
+            this.dislike++;
+            this.dislikeRated = true
+          } else {
+            this.dislike--;
+            this.dislikeRated = false
+          }
+        }
       }
     }
   }

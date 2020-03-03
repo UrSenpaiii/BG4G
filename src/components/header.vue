@@ -46,22 +46,8 @@
 <script>
   export default {
     data() {
-      return {
-        showPass: true,
-      }
+      return {}
     },
-    methods: {
-      showPas() {
-        if (this.showPass) {
-          document.getElementById('showPass').className = 'icoPos eyeSlash';
-          document.getElementById('password').type = 'text';
-        } else {
-          document.getElementById('showPass').className = 'icoPos eye';
-          document.getElementById('password').type = 'password';
-        }
-        this.showPass = !this.showPass;
-      }
-    }
   }
 </script>
 
