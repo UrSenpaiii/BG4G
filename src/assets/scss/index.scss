@@ -4,6 +4,25 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   vertical-align: baseline;
 }
 
+// Scrollbar
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $neutral-placeholder;
+  border-radius: 75px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: darken($neutral-placeholder, 7%);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: darken($neutral-placeholder, 10%);
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -96,7 +115,7 @@ button, .btn, .btn-block {
   transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out
 }
 
-.lighter-icon:hover {
+.ico-lighter:hover {
   color: $neutral-regular;
   transition: .15s;
   cursor: pointer;

@@ -29,7 +29,7 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
   canvas {
     display: block;
     left: 0;

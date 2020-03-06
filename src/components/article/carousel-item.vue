@@ -6,13 +6,3 @@
     </div>
   </div>
 </template>
-
-<script>
-    export default {
-        name: "carousel-item"
-    }
-</script>
-
-<style scoped>
-
-</style>

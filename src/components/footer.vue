@@ -55,6 +55,7 @@
       </div>
     </div>
     <hr>
+    <!--Soc networks-->
     <ul class="list-unstyled list-inline text-center mb-3">
       <li class="list-inline-item">
         <a class="fab fa-facebook-f"></a>
@@ -72,19 +73,12 @@
         <a class="fab fa-dribbble"></a>
       </li>
     </ul>
+    <!--Copyright-->
     <div class="footer-copyright text-center py-3 bg-custom">
       <p>© 2020 Copyright: <a href="https://BG4G.boots/" class="underlined">BG4G.com</a></p>
     </div>
   </footer>
 </template>
-
-<script>
-  export default {
-    data() {
-      return {}
-    }
-  }
-</script>
 
 <style lang="scss" scoped>
   .bg-custom {

@@ -12,6 +12,7 @@
         </div>
         (<a href="#" class="my-3">не хочу ничего читать, покажи видосы!</a>)
       </section>
+      <!--Main art/Canvas-->
       <slot name="canvas"></slot>
       <!--<div class="col-12 my-5"><img src="/assets/img/index-art.png" width="900"></div>-->
       <!--Block start-->
@@ -33,7 +34,7 @@
           </div>
         </div>
       </section>
-      <!--Block start-->
+      <!--Block w/ cards-->
       <section class="container text-center">
           <h2 class="font-weight-light">Языки программирования</h2>
           <h5 class="font-weight-light">и не только</h5>
@@ -63,15 +64,3 @@
     </div>
   </section>
 </template>
-
-<script>
-  export default {
-    data() {
-      return {}
-    }
-  }
-</script>
-
-<style lang="scss" scoped>
-
-</style>

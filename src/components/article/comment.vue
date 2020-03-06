@@ -16,10 +16,10 @@
           <div>
             <div>
               <!--Rate-->
-              <i @click="rateComment(true)" class="fas fa-chevron-up lighter-icon"></i> {{like}}
-              <i @click="rateComment(false)" class="fas fa-chevron-down lighter-icon"></i> {{dislike}}
+              <i @click="rateComment(true)" class="fas fa-chevron-up ico-lighter"></i> {{like}}
+              <i @click="rateComment(false)" class="fas fa-chevron-down ico-lighter"></i> {{dislike}}
               <!--Complaint-->
-              <i class="ml-2 fas fa-flag lighter-icon"></i>
+              <i class="ml-2 fas fa-flag ico-lighter"></i>
             </div>
           </div>
         </div>

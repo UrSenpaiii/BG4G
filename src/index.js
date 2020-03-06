@@ -17,9 +17,9 @@ global.$ = function (selector, startNode) {
   let node = (startNode) ? startNode : document;
   let pref = selector[0], value = selector.substr(1);
   if (pref === "#") return node.getElementById(value);
-  else if (pref === "^") return node.getElementsByName(value);
   else if (pref === ".") return node.getElementsByClassName(value);
-  else if (pref === "@") return node.getElementsByTagName(value);
+  else if (pref === "^") return node.getElementsByName(value);
+  else if (pref === "_") return node.getElementsByTagName(value);
   else return node.getElementById(selector);
 };
 
@@ -80,3 +80,19 @@ const app = new Vue({
   },
 // data: Object.assign(data, {"name": "vasya"})
 });
+
+// (function(timer) {
+//   window.addEventListener('load', function() {
+//     var el = document.body;
+//     el.addEventListener('scroll', function(e) {
+//       (function(el){
+//         el.classList.add('scroll');
+//         clearTimeout(timer);
+//         timer = setTimeout(function() {
+//           el.classList.remove('scroll');
+//         }, 100);
+//       })(el);
+//     })
+//   })
+// })();
+// https://stackoverflow.com/questions/43737303/only-show-scrollbar-when-page-scrolls-in-css

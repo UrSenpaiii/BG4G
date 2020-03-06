@@ -4,7 +4,7 @@
       <slot name="sitemapItemText"></slot>
     </a></li>
     <ul class="sub-list" v-if="sub && showSub">
-      <slot name="sub-item"></slot>
+      <slot name="subItem"></slot>
     </ul>
   </div>
 </template>
@@ -13,11 +13,7 @@
   export default {
     props: {
       sub: Boolean,
-      link: {
-        type: String,
-        default: "#"
-        // required: true
-      }
+      link: String,
     },
     data() {
       return {

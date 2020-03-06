@@ -9,6 +9,7 @@
         </button>
         <!--Header List-->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!--Items-->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
               <a class="nav-link" href="/pages/catalog.html">All courses</a>
@@ -19,6 +20,7 @@
             <li class="nav-item">
               <a class="nav-link disabled" href="#" aria-disabled="true">Forum</a>
             </li>
+            <!--Drop down menu-->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">Help</a>
               <div class="dropdown-menu">
@@ -35,7 +37,7 @@
               <button class="btn btn-outline-dark fa fa-search search-block-height" type="submit"></button>
             </div>
           </form>
-          <!--############-->
+          <!--Modal/User block-->
           <slot></slot>
         </div>
       </nav>
@@ -43,15 +45,7 @@
   </header>
 </template>
 
-<script>
-  export default {
-    data() {
-      return {}
-    },
-  }
-</script>
-
-<style lang="scss" scoped>
+<style scoped>
   .search-block-height {
     height: 30px;
   }

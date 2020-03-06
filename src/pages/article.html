@@ -2,23 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>BG4G</title>
+  <title>BG4G | Current</title>
 </head>
 <body>
 <div id="app">
   <v-header>
     <v-modal-form></v-modal-form>
   </v-header>
-  <v-article>
-    <v-sitemap slot="sitemap">
+  <v-article title="C" :views="321" author="Vasya Pupkin" :year="2018" link="#">
+    <v-sitemap slot="sitemap" link="#">
       <span slot="sitemapItemText">Lorem ipsum dolor.</span>
     </v-sitemap>
-    <v-sitemap slot="sitemap" :sub="true">
+    <v-sitemap slot="sitemap" :sub="true" link="#">
       <span slot="sitemapItemText">Lorem ipsum dolor.</span>
-      <v-sitemap slot="sub-item">
+      <v-sitemap slot="subItem" link="#">
         <span slot="sitemapItemText">Lorem ipsum dolor.</span>
       </v-sitemap>
     </v-sitemap>
+
+    <p slot="description">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab amet aspernatur dolor eaque est, eveniet hic inventore ipsa magni non quisquam
+      quo quos reprehenderit ut veniam vitae, voluptatem voluptatum?
+    </p>
 
     <v-carousel-item slot="carouselItem">
       <v-carousel-card slot="carouselCard" title="Lang Title" author="Roberto Dovinchy"></v-carousel-card>

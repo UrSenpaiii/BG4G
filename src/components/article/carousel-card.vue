@@ -13,13 +13,6 @@
 
 <script>
   export default {
-    props: {
-      title: String,
-      author: String
-    }
+    props: {title: String, author: String}
   }
 </script>
-
-<style scoped>
-
-</style>

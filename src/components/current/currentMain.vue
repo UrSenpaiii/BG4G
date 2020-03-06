@@ -1,6 +1,7 @@
 <template>
   <div class="row">
     <div class="col-12 p-4">
+
       <img width="500" class="float-left mr-3" :src="`/assets/img/currentImg/${alias}/main.png`">
       <ul class="list-group">
         <li class="list-group-item text-capitalize">language: <span class="d-inline h5">{{title}}</span></li>
