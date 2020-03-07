@@ -1,12 +1,16 @@
 <template>
-  <div>
-    <li class="sitemap-list-item"><i :class="iconsColor + ' fa-folder lighter-icon'" @click="showSubBlock(this)"></i> <a :href="link">
-      <slot name="sitemapItemText"></slot>
-    </a></li>
-    <ul class="sub-list" v-if="sub && showSub">
-      <slot name="subItem"></slot>
-    </ul>
-  </div>
+    <li class="sitemap-list-item">
+      <!--Ico-->
+      <i :class="iconsColor + ' fa-folder mr-1'" @click="showSubBlock(this)"></i>
+      <!--Link-->
+      <a :href="link">
+        <slot name="sitemapItemText"></slot>
+      </a>
+      <!--Sub-->
+      <ul class="sub-list" v-if="sub && showSub">
+        <slot name="subItem"></slot>
+      </ul>
+    </li>
 </template>
 
 <script>
@@ -22,7 +26,7 @@
       }
     },
     mounted: function () {
-      this.sub ? this.iconsColor = "fas" : this.iconsColor = "far"
+      this.sub ? this.iconsColor = "fas ico-lighter" : this.iconsColor = "far"
     },
     methods: {
       showSubBlock(e) {

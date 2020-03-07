@@ -7,7 +7,7 @@
           <aside class="col-3 border-right">
             <!--Sitemap-->
             <div class="p-3">
-              <h3>All pages</h3>
+              <h3>Все статьи</h3>
               <ul class="mt-3">
                 <!---->
                 <slot name="sitemap"></slot>
@@ -35,10 +35,10 @@
               <!--Specifications-->
               <div class="col-7">
                 <ul class="list-group">
-                  <li class="list-group-item text-capitalize h5 p-2">views: <span class="h4">{{views}}</span></li>
-                  <li class="list-group-item text-capitalize h5 p-2">author: <a href="#" class="h4">{{author}}</a></li>
-                  <li class="list-group-item text-capitalize h5 p-2">year: <a href="#" class="h4">{{year}}</a></li>
-                  <li class="list-group-item text-capitalize h5 p-2">link: <a href="#" class="h4">{{link}}</a></li>
+                  <li class="list-group-item text-capitalize p-2">views: <span class="h5">{{views}}</span></li>
+                  <li class="list-group-item text-capitalize p-2">author: <a href="#" class="h5">{{author}}</a></li>
+                  <li class="list-group-item text-capitalize p-2">year: <a href="#" class="h5">{{year}}</a></li>
+                  <li class="list-group-item text-capitalize p-2">link: <a href="#" class="h5">{{link}}</a></li>
                 </ul>
               </div>
             </section>
@@ -47,7 +47,7 @@
               <slot name="description"></slot>
               <!--Video/Book-->
               <section class="d-flex justify-content-center">
-                <div class="d-flex align-items-center">
+                <div class="d-flex align-items-center parent">
                   <img src="/assets/img/icons/arrow-left.png" class="img-lighter" width="50">
                 </div>
                 <!--<iframe width="640" height="360" src="https://www.youtube.com/embed/t0_IRViZcHs" allowfullscreen></iframe>-->
@@ -73,8 +73,8 @@
                   numquam odit placeat porro praesentium quam repellat sed sequi suscipit temporibus tenetur vitae voluptas voluptatem? Consequuntur.
                   numquam odit placeat porro praesentium quam repellat sed sequi suscipit temporibus tenetur vitae voluptas voluptatem? Consequuntur.
                 </div>
-                <div class="d-flex align-items-center">
-                  <img src="/assets/img/icons/arrow-right.png" class="img-lighter" width="50">
+                <div class="d-flex align-items-center parent">
+                  <img src="/assets/img/icons/arrow-right.png" width="50">
                 </div>
               </section>
               <!--Pagination-->
@@ -139,11 +139,11 @@
   }
 </script>
 <style lang="scss" scoped>
-  .img-lighter {
+  .parent:hover{
     filter: brightness(75%);
     cursor: pointer;
     transition: .2s;
-    &:hover {
+    img {
       filter: brightness(100%);
     }
   }

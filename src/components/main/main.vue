@@ -13,8 +13,8 @@
         (<a href="#" class="my-3">не хочу ничего читать, покажи видосы!</a>)
       </section>
       <!--Main art/Canvas-->
-      <slot name="canvas"></slot>
-      <!--<div class="col-12 my-5"><img src="/assets/img/index-art.png" width="900"></div>-->
+      <!--<slot name="canvas"></slot>-->
+      <div class="col-12 my-5"><img src="/assets/img/index-art.png" width="900"></div>
       <!--Block start-->
       <section class="container-fluid bg-white">
         <div class="container">
@@ -23,21 +23,20 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-9">
-              Ну попал ты сюда неслучайно, значит ты скорее всего полный ноль, который решил заниматься
-              программированием, Поздравляю,
-              ты попал на нужный сайт. Сдесь собрана большая часть информации по многим, интересующим тебя темам.
+              Если ты зашел на этот сайт, значит ты скорее всего полный ноль, который решил заниматься
+              программированием. Поздравляю, ты попал на нужный сайт. Сдесь собрана большая часть информации со всего рунета по многим, интересующим тебя темам.
             </div>
             <div class="col-6 d-flex justify-content-between py-4">
-              <a href="#"><img src="/assets/img/books.svg" alt="books" height="160" width="160"></a>
-              <a href="#"><img src="/assets/img/videos.svg" alt="books" height="160" width="160"></a>
+              <a href="#"><img src="/assets/img/books.svg" height="160" width="160" title="Книги"></a>
+              <a href="#"><img src="/assets/img/videos.svg" height="160" width="160" title="Видео"></a>
             </div>
           </div>
         </div>
       </section>
       <!--Block w/ cards-->
       <section class="container text-center">
-          <h2 class="font-weight-light">Языки программирования</h2>
-          <h5 class="font-weight-light">и не только</h5>
+        <h2 class="font-weight-light">Языки программирования</h2>
+        <h5 class="font-weight-light">и не только</h5>
         <!--Cards-->
         <slot name="cards"></slot>
       </section>
@@ -48,10 +47,8 @@
             <div class="col-6 text-center">
               <h2 class="font-weight-light mb-2">Без понятия что учить?</h2>
               <p>
-                Тогда <a href="#" class="underlined">вот страница</a>, на которой тебе всё
-                объяснят
-                о современном IT. Расскажут о типах, видах и фундаментальных темах программирования, а так же о
-                професиях и карьерном росте в данной сфере
+                Тогда <a href="#" class="underlined">вот страница</a>, на которой можно узнать о современном IT. Расскажут о типах, видах и фундаментальных темах программирования, а так же о
+                професиях и карьерном росте в данной сфере. Подскажут, что нужно учить и помогут не наступить на грабли.
               </p>
               <a href="/pages/catalog.html" class="btn btn-outline-dark mt-4">Отстань, дай посмотрю, что у вас тут есть</a>
             </div>

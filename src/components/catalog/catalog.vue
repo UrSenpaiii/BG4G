@@ -3,7 +3,7 @@
     <main class="row bg-white justify-content-between p-4">
       <h3>{{selected}}</h3>
       <div class="form-group">
-        <h5 class="d-inline mr-2">Chose category:</h5>
+        <h5 class="d-inline mr-2">Выберите категорию:</h5>
         <label>
           <select v-model="selected" class="form-control">
             <option v-for="option in options" :value="option.text">
@@ -23,14 +23,14 @@
   export default {
     data() {
       return {
-        selected: 'All',
+        selected: 'Все',
         options: [
-          {text: 'All', value: 0},
-          {text: 'Program languages', value: 1},
-          {text: 'Frameworks', value: 2},
-          {text: 'OS', value: 3},
-          {text: 'Text Editors', value: 4},
-          {text: 'Other', value: 5}
+          {text: 'Все', value: 0},
+          {text: 'Языки программирования', value: 1},
+          {text: 'Фреймворки', value: 2},
+          {text: 'ОС', value: 3},
+          {text: 'Текстовые редакторы', value: 4},
+          {text: 'Другое', value: 5}
         ],
       }
     },

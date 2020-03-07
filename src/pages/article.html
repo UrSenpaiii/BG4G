@@ -18,6 +18,15 @@
       <v-sitemap slot="subItem" link="#">
         <span slot="sitemapItemText">Lorem ipsum dolor.</span>
       </v-sitemap>
+      <v-sitemap slot="subItem" :sub="true" link="#">
+        <span slot="sitemapItemText">Lorem ipsum dolor.</span>
+        <v-sitemap slot="subItem" :sub="true" link="#">
+          <span slot="sitemapItemText">Lorem ipsum dolor.</span>
+          <v-sitemap slot="subItem" link="#">
+            <span slot="sitemapItemText">Lorem ipsum dolor.</span>
+          </v-sitemap>
+        </v-sitemap>
+      </v-sitemap>
     </v-sitemap>
 
     <p slot="description">
@@ -25,7 +34,14 @@
       quo quos reprehenderit ut veniam vitae, voluptatem voluptatum?
     </p>
 
+    <v-carousel-item slot="carouselItem" active="active">
+      <v-carousel-card slot="carouselCard" title="Lang Title" author="Roberto Dovinchy"></v-carousel-card>
+      <v-carousel-card slot="carouselCard" title="Lang Title" author="Roberto Dovinchy"></v-carousel-card>
+      <v-carousel-card slot="carouselCard" title="Lang Title" author="Roberto Dovinchy"></v-carousel-card>
+    </v-carousel-item>
     <v-carousel-item slot="carouselItem">
+      <v-carousel-card slot="carouselCard" title="Lang Title" author="Roberto Dovinchy"></v-carousel-card>
+      <v-carousel-card slot="carouselCard" title="Lang Title" author="Roberto Dovinchy"></v-carousel-card>
       <v-carousel-card slot="carouselCard" title="Lang Title" author="Roberto Dovinchy"></v-carousel-card>
     </v-carousel-item>
 

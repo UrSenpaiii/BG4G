@@ -3,12 +3,12 @@
     <!-- Footer Links -->
     <div class="container text-center text-md-left">
       <div class="row">
-        <div class="col-md-4 mx-auto">
-          <h5 class="font-weight-bold text-uppercase mt-1 mb-4">Footer Content</h5>
-          <p>Thank you for visit our site. If you need extra-information or back links there below.</p>
+        <div class="col-5">
+          <h5 class="font-weight-bold text-uppercase mt-1 mb-4">Авторские права</h5>
+          <p>Вся представленная информация на сайте была взята из свободного доступа в интернете. Если ваши АП были нарушены, обратитесь на почту sd103e@mail.ru</p>
         </div>
         <hr>
-        <div class="col-md-2 mx-auto">
+        <div class="col-2">
           <h5 class="font-weight-bold text-uppercase mt-1 mb-4">useful links</h5>
           <ul class="list-unstyled">
             <li>
@@ -22,8 +22,8 @@
             </li>
           </ul>
         </div>
-        <hr class="clearfix w-100 d-md-none">
-        <div class="col-md-2 mx-auto">
+        <hr>
+        <div class="col-2">
           <h5 class="font-weight-bold text-uppercase mt-1 mb-3">Links</h5>
           <ul class="list-unstyled">
             <li>
@@ -38,7 +38,7 @@
           </ul>
         </div>
         <hr class="clearfix w-100 d-md-none">
-        <div class="col-md-2 mx-auto">
+        <div class="col-2">
           <h5 class="font-weight-bold text-uppercase mt-1 mb-3">Donate</h5>
           <ul class="list-unstyled">
             <li>
@@ -58,19 +58,16 @@
     <!--Soc networks-->
     <ul class="list-unstyled list-inline text-center mb-3">
       <li class="list-inline-item">
-        <a class="fab fa-facebook-f"></a>
+        <a class="fab fa-facebook-f" title="FACEBOOK"></a>
       </li>
       <li class="list-inline-item">
-        <a class="fab fa-twitter"></a>
+        <a class="fab fa-soundcloud" title="SoundCloud"></a>
       </li>
       <li class="list-inline-item">
-        <a class="fab fa-google-plus"></a>
+        <a class="fab fa-twitter" title="Twitter"></a>
       </li>
       <li class="list-inline-item">
-        <a class="fab fa-linkedin"></a>
-      </li>
-      <li class="list-inline-item">
-        <a class="fab fa-dribbble"></a>
+        <a class="fab fa-vk" title="vk"></a>
       </li>
     </ul>
     <!--Copyright-->

@@ -9,9 +9,8 @@
     <v-modal-form></v-modal-form>
   </v-header>
   <v-current>
-    <v-current-main ref="asd" slot="main" alias="c" title="C" invented="1972" developer="Dennis Ritchie" for_what="drivers, OS, microcontroller"
-                    :suitable="false">
-      <p slot="description">Си — компилируемый статически типизированный язык программирования общего назначения,
+    <v-current-main slot="main" alias="c" title="C" :need="2" :level_type="1" for_what="Драйверы, ОС, ПО" :suitable="false">
+      <p>Си — компилируемый статически типизированный язык программирования общего назначения,
         разработанный в 1969—1973 годах сотрудником Bell Labs Деннисом Ритчи как развитие языка Би. Первоначально был разработан для реализации
         операционной системы UNIX, но впоследствии был перенесён на множество других платформ. C — живой язык в том смысле, что он активно
         применяется
@@ -34,7 +33,7 @@
         не задумывали как язык для обучения начинающих. Но это не значит, что с него нельзя начать, можно начать с чего угодно.</p>
     </v-current-main>
     <v-current-card slot="basicVideos" alias="c" card_alias="c4hour" title="Изучение Си за час" author="Гоша Дударь">
-      <p slot="description">Данное видео предназначено для тех, что хочет пощупать Си не вникая в него, понравится или нет, стоит ли учить...</p>
+      <p>Данное видео предназначено для тех, что хочет пощупать Си не вникая в него, понравится или нет, стоит ли учить...</p>
     </v-current-card>
     <v-current-card slot="basicBooks"></v-current-card>
     <v-current-card slot="frameworksVideos"></v-current-card>

@@ -1,12 +1,13 @@
-<template><!--User block-->
+<template>
+  <!--User block-->
   <div>
     <!--Buttons-->
     <ul class="navbar-nav">
       <li class="nav-btn">
-        <a href="#" class="btn btn-sm btn-dark mr-2" @click="modalTitle='Login', loginPlaceholder='', showPass=true, showModal=!showModal">Login</a>
+        <a href="#" class="btn btn-sm btn-dark mr-2" @click="modalTitle='Вход', loginPlaceholder='', showPass=true, btnText='Войти', showModal=!showModal">Вход</a>
       </li>
       <li class="nav-btn">
-        <a href="#" class="btn btn-sm btn-outline-secondary" @click="modalTitle='Sign up', loginPlaceholder=' or email', showPass=true, showModal=!showModal">Sign up</a>
+        <a href="#" class="btn btn-sm btn-outline-secondary" @click="modalTitle='Регистрация', loginPlaceholder=' или email', showPass=true, btnText='Зарегистрироваться', showModal=!showModal">Регистрация</a>
       </li>
     </ul>
     <!--Modal-->
@@ -34,30 +35,30 @@
                 <input type="text" id="SignUpLogin" class="form-control login-ico" name="username" :placeholder="'Enter login' + loginPlaceholder" required>
               </div>
               <!--Email-->
-              <div class="form-group" v-if="modalTitle === 'Sign up'">
-                <label for="email">Email address</label>
-                <input type="email" class="form-control email-ico" id="email" name="email" placeholder="Enter email" required>
+              <div class="form-group" v-if="modalTitle === 'Регистрация'">
+                <label for="email">Email адрес</label>
+                <input type="email" class="form-control email-ico" id="email" name="email" placeholder="Введите email" required>
               </div>
               <!--Password-->
               <div class="form-group">
-                <label for="password1" class="h5">Password</label>
+                <label for="password1" class="h5">Пароль</label>
                 <!--First pass-->
                 <div class="mb-2">
                   <i class="ico-pos fas fa-eye" id="showPass" @click="showPas"></i>
-                  <input type="password" class="form-control password-ico" id="password1" name="password1" placeholder="Enter password" required>
+                  <input type="password" class="form-control password-ico" id="password1" name="password1" placeholder="Введите пароль" required>
                 </div>
                 <!--Second pass-->
-                <input type="password" v-if="modalTitle === 'Sign up'" class="form-control password-ico" id="password2" name="password2" placeholder="Enter password again" required>
+                <input type="password" v-if="modalTitle === 'Sign up'" class="form-control password-ico" id="password2" name="password2" placeholder="Введите пароль еще раз" required>
               </div>
               <!--Remember-->
               <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
-                <label class="form-check-label" for="rememberMe">Remember me</label>
+                <label class="form-check-label" for="rememberMe">Запомнить меня</label>
               </div>
               <!--Button-->
               <div class="d-flex justify-content-end">
-                <button type="button" class="btn btn-outline-secondary mr-2" @click="close()">Close</button>
-                <button type="submit" class="btn btn-dark" name="authorization">Login</button>
+                <button type="button" class="btn btn-outline-secondary mr-2" @click="close()">Отмена</button>
+                <button type="submit" class="btn btn-dark" name="authorization">{{btnText}}</button>
               </div>
             </form>
           </div>
@@ -68,7 +69,7 @@
 </template>
 <script> export default {
   data() {
-    return {showModal: false, modalTitle: "", loginPlaceholder: "", showPass: true,}
+    return {showModal: false, modalTitle: "", loginPlaceholder: "", btnText: "", showPass: true,}
   },
   methods: {
     close() {

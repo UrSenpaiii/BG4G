@@ -8,7 +8,7 @@
           <div class="text-capitalize h5 mt-2">Автор: {{author}}</div>
         </div>
         <div class="text-muted my-2">
-          <slot name="description"></slot>
+          <slot></slot>
         </div>
         <a class="btn btn-dark" href="/pages/article.html">Узнать больше</a>
       </div>

@@ -20,11 +20,12 @@
             <div class="col-4">
               <div class="d-flex">
                 <i class="mr-3 fas fa-book "></i>
-                <span><b>{{books}}</b> книги</span>
+                <span>Книг: <b>{{books}}</b></span>
               </div>
               <div class="d-flex">
                 <i class="mr-3 fas fa-video"></i>
-                <span style="margin-left: -4px;"><b>{{videos}}</b> видео-курсов</span></div>
+                <span style="margin-left: -4px;">Видео-курсов: <b>{{videos}}</b></span>
+              </div>
             </div>
             <!---->
             <div class="col">
@@ -34,7 +35,7 @@
               </div>
               <div class="d-flex">
                 <i class="mr-3 fa fa-cat"></i>
-                <span><b>N</b> щегота потом придумаю</span>
+                <span><b>{{need}} востребован</b></span>
               </div>
             </div>
           </div>
@@ -49,10 +50,10 @@
 </template>
 
 <script>
-  const NAMES = ['Program language', 'Framework', 'OS', 'Text Editor', 'Other'];
+  const NAMES = ['Язык программирования', 'Фреймворк'];
   export default {
     props: {
-      alias: String, type: Number, books: Number, videos: Number, time: Number,
+      alias: String, type: Number, books: Number, videos: Number, time: Number, need: String
     },
     computed: {
       name() {

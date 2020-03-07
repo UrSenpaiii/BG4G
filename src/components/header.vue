@@ -12,29 +12,29 @@
           <!--Items-->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="/pages/catalog.html">All courses</a>
+              <a class="nav-link" href="/pages/catalog.html">Все курсы</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">By filters</a>
+              <a class="nav-link" href="#">Фильтры</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" aria-disabled="true">Forum</a>
+              <a class="nav-link disabled" href="#" aria-disabled="true">Форум</a>
             </li>
             <!--Drop down menu-->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">Help</a>
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown">Помощь</a>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">FAQ</a>
-                <a class="dropdown-item" href="#">About as</a>
-                <a class="dropdown-item" href="#">Feedback</a>
+                <a class="dropdown-item" href="#">О нас</a>
+                <a class="dropdown-item" href="#">Обратная связь</a>
               </div>
             </li>
           </ul>
           <!--Search Block-->
           <form class="form-inline input-group search-block-weight mr-4">
-            <input type="search" class="form-control border-dark search-block-height" placeholder="Search">
+            <input type="search" class="form-control border-dark search-block-height" placeholder="Поиск">
             <div class="input-group-append">
-              <button class="btn btn-outline-dark fa fa-search search-block-height" type="submit"></button>
+              <button class="btn btn-outline-dark fa fa-search search-block-height" type="submit" title="Искать"></button>
             </div>
           </form>
           <!--Modal/User block-->
