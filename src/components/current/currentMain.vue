@@ -3,13 +3,15 @@
     <div class="col-12 p-4">
       <img width="500" class="float-left mr-3" :src="`/assets/img/currentImg/${alias}/main.png`">
       <ul class="list-group">
-        <li class="list-group-item">Язык программирования: <span class="h5">{{title}}</span></li>
-        <li class="list-group-item">Востребовательность: <span :class="['h5', CLASSES[need]]">{{NEED_TYPES[need]}}</span></li>
-        <li class="list-group-item">Тип: <span :class="['h5', CLASSES[level_type]]">{{LEVEL_TYPES[level_type]}}</span></li>
-        <li class="list-group-item">Направленность: <span class="h5" id="">{{for_what}}</span></li>
-        <li class="list-group-item">Подходит новичкам: <span :class="['h5', suitable ? 'text-success' : 'text-danger']">{{suitable? "Да" : "Нет"}}</span></li>
+        <li class="list-group-item">Язык программирования: <a href="#" class="h5">{{title}}</a></li>
+        <li class="list-group-item">Направленность: <a href="#" class="h5" id="">{{for_what}}</a></li>
+        <li class="list-group-item">Тип: <a href="#" :class="['h5', CLASSES[level_type]]">{{LEVEL_TYPES[level_type]}}</a></li>
+        <li class="list-group-item">Востребовательность: <a href="#" :class="['h5', CLASSES[need]]">{{NEED_TYPES[need]}}</a></li>
+        <li class="list-group-item">Подходит новичкам: <a href="#" :class="['h5', suitable ? 'text-success' : 'text-danger']">{{suitable? "Да" : "Нет"}}</a></li>
       </ul>
-      <div class="mt-2"><slot></slot></div>
+      <div class="mt-2">
+        <slot></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -30,6 +32,11 @@
 </script>
 
 <style lang="scss" scoped>
-  .h4 {font-weight: $mainFontWeight;}
-  .h5 {margin-bottom: 0;}
+  .h4 {
+    font-weight: $mainFontWeight;
+  }
+
+  .h5 {
+    margin-bottom: 0;
+  }
 </style>

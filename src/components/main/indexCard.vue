@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-8">
           <!--Type-->
-          <a href="#" class="text-uppercase">{{name}}</a>
+          <a href="#" class="text-uppercase">{{NAMES[this.type]}}</a>
           <!--Title-->
           <h2 class="mb-3 mt-1 text-capitalize">
             <a href="/pages/current.html">{{alias}}</a>
@@ -35,7 +35,7 @@
               </div>
               <div class="d-flex">
                 <i class="mr-3 fa fa-cat"></i>
-                <span><b>{{need}} востребован</b></span>
+                <span>{{need ? "Высоко" : "Хорошо"}} востребован</span>
               </div>
             </div>
           </div>
@@ -50,14 +50,13 @@
 </template>
 
 <script>
-  const NAMES = ['Язык программирования', 'Фреймворк'];
   export default {
     props: {
-      alias: String, type: Number, books: Number, videos: Number, time: Number, need: String
+      alias: String, type: Number, books: Number, videos: Number, time: Number, need: Boolean
     },
-    computed: {
-      name() {
-        return NAMES[this.type];
+    data() {
+      return {
+        NAMES: ['Язык программирования', 'Фреймворк']
       }
     }
   }

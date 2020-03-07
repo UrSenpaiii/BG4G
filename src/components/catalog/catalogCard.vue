@@ -21,9 +21,6 @@
     props: {
       alias: String, title: String, videos: Number, books: Number,
     },
-    data() {
-      return {}
-    },
   }
 </script>
 

@@ -34,22 +34,5 @@
         ],
       }
     },
-    //   this.selected = option.value;
-    //   switch (this.selected) {
-    //     case 1:
-    //       this.curr = 'Program languages';
-    //       break;
-    //     case 2:
-    //       this.curr = 'Frameworks';
-    //       break;
-    //     case 3:
-    //       this.curr = 'Text Editors';
-    //       break;
-    //     case 4:
-    //       this.curr = 'Other';
-    //       break;
-    //     default:
-    //       this.curr = 'All'
-    //   }
   }
 </script>

@@ -15,7 +15,7 @@
               <a class="nav-link" href="/pages/catalog.html">Все курсы</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Фильтры</a>
+              <a class="nav-link" href="/pages/filters.html">Фильтры</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="#" aria-disabled="true">Форум</a>

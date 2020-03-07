@@ -1,32 +1,33 @@
 <template>
-    <li class="sitemap-list-item">
-      <!--Ico-->
-      <i :class="iconsColor + ' fa-folder mr-1'" @click="showSubBlock(this)"></i>
-      <!--Link-->
-      <a :href="link">
-        <slot name="sitemapItemText"></slot>
-      </a>
-      <!--Sub-->
-      <ul class="sub-list" v-if="sub && showSub">
-        <slot name="subItem"></slot>
-      </ul>
-    </li>
+  <li class="sitemap-list-item">
+    <!--Ico-->
+    <i :class="iconsColor + ' fa-folder mr-1'" @click="showSubBlock()" :title="icoTitle"></i>
+    <!--Link-->
+    <a :href="link">
+      <slot name="sitemapItemText"></slot>
+    </a>
+    <!--Sub-->
+    <ul class="sub-list" v-if="sub && showSub">
+      <slot name="subItem"></slot>
+    </ul>
+  </li>
 </template>
 
 <script>
   export default {
-    props: {
-      sub: Boolean,
-      link: String,
-    },
+    props: {sub: Boolean, link: String},
     data() {
       return {
         showSub: false,
-        iconsColor: null
       }
     },
-    mounted: function () {
-      this.sub ? this.iconsColor = "fas ico-lighter" : this.iconsColor = "far"
+    computed: {
+      iconsColor() {
+        return this.sub ? "fas ico-lighter" : "far"
+      },
+      icoTitle() {
+        return this.sub ? "Переключить" : ""
+      }
     },
     methods: {
       showSubBlock(e) {
