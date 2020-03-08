@@ -24,7 +24,7 @@
               </div>
               <div class="d-flex">
                 <i class="mr-3 fas fa-video"></i>
-                <span style="margin-left: -4px;">Видео-курсов: <b>{{videos}}</b></span>
+                <span style="margin-left: -5px;">Видео-курсов: <b>{{videos}}</b></span>
               </div>
             </div>
             <!---->
@@ -34,8 +34,8 @@
                 <span><b>{{time}}</b> месяца</span>
               </div>
               <div class="d-flex">
-                <i class="mr-3 fa fa-cat"></i>
-                <span>{{need ? "Высоко" : "Хорошо"}} востребован</span>
+                <i class="mr-3 fas fa-comment-dollar"></i>
+                <span style="margin-left: -2px;">{{need ? "Высоко" : "Хорошо"}} востребован</span>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@
       <div class="form-group">
         <h5 class="d-inline mr-2">Выберите категорию:</h5>
         <label>
-          <select v-model="selected" class="form-control">
+          <select v-model="selected">
             <option v-for="option in options" :value="option.text">
               {{option.text}}
             </option>
@@ -36,3 +36,12 @@
     },
   }
 </script>
+
+<style lang="scss" scoped>
+  select {
+    padding: 5px 5px 2px 5px;
+    border: 0;
+    border-bottom: 1px solid silver;
+    border-radius: 0;
+  }
+</style>
