@@ -52,7 +52,7 @@
 <script>
   export default {
     props: {
-      alias: String, type: Number, books: Number, videos: Number, time: Number, need: Boolean
+      alias: String, type: Number, books: Number, videos: Number, time: Number, need: Boolean, link: String
     },
     data() {
       return {
