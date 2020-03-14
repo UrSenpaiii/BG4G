@@ -1,17 +1,17 @@
 <template>
   <div class="col-3 p-3">
     <div class="card">
-      <a href="/pages/current.html">
+      <a :href="'/pages/current.html?alias=' + alias">
         <!--<i class="fas fa-code position-absolute border"></i><i class="fab fa-diaspora"></i><i class="fas fa-laptop-code"></i><i class="fas fa-terminal"></i>-->
         <img class="card-img-top border-bottom" :src="'/assets/img/catalog/' + alias + '/catalog.png'" height="133">
       </a>
       <div class="card-body pt-0">
-        <h3 class="my-1"><a href="/pages/current.html">{{title}}</a></h3>
-        <a href="/pages/current.html">Видео: <b>{{videos}}</b> шт.</a>
+        <h3 class="my-1"><a :href="'/pages/current.html?alias=' + alias">{{title}}</a></h3>
+        <a :href="'/pages/current.html?alias=' + alias">Видео: <b>{{videos}}</b> шт.</a>
         <br>
-        <a href="/pages/current.html">Книги: <b>{{books}}</b> шт.</a>
+        <a :href="'/pages/current.html?alias=' + alias">Книги: <b>{{books}}</b> шт.</a>
         <br>
-        <a href="/pages/current.html" class="btn btn-dark btn-block mt-3">Дай посмотрю</a>
+        <a :href="'/pages/current.html?alias=' + alias" class="btn btn-dark btn-block mt-3">Дай посмотрю</a>
       </div>
     </div>
   </div>
@@ -20,7 +20,7 @@
 <script>
   export default {
     props: {
-      alias: String, title: String, videos: Number, books: Number,
+      alias: String, title: String, type: Number, videos: Number, books: Number
     },
   }
 </script>

@@ -1,19 +1,18 @@
 <template>
   <section class="container">
     <main class="row bg-white justify-content-between p-4">
-      <h3>{{selected}}</h3>
+      <h3>{{options[selected]}}</h3>
       <div class="form-group">
         <h5 class="d-inline mr-2">Выберите категорию:</h5>
         <label>
           <select v-model="selected">
-            <option v-for="(option, i) in options" :value="option">
-              {{option}}
-            </option>
+            <option v-for="(option, i) in options" :value="i">{{option}}</option>
           </select>
         </label>
       </div>
       <div class="row col-12">
-        <slot></slot>
+        <v-catalog-card v-for="(e, i) in list" :key="i" :alias="e.alias" :title="e.title" :videos="e.videos"
+                        :books="e.books"></v-catalog-card>
       </div>
     </main>
   </section>
@@ -23,12 +22,31 @@
   export default {
     data() {
       return {
-        selected: 'Все',
+        selected: 0,
         options: [
           "Все", "Языки программирования", "Фреймворки", "OC", "Текстовые редакторы", "Другое"
         ],
       }
     },
+    created() {
+      PARAMS[0] === undefined ? this.selected = 0 : this.selected = PARAMS.type
+    },
+    computed: {
+      list() {
+        let result = [];
+        for (let key in DATA) {
+          let e = DATA[key];
+          if (this.selected === 0 || this.selected === e.type)
+            result.push({alias: e.alias, title: e.title, videos: e.videos.length, books: e.books.length});
+          if (!e.frameworks || (this.selected !== 2 && this.selected !== 0)) continue;
+          for (let k in e.frameworks) {
+            let f = e.frameworks[k];
+            result.push({alias: f.alias, title: f.title, videos: f.videos.length, books: f.books.length});
+          }
+        }
+        return result;
+      }
+    }
   }
 </script>
 

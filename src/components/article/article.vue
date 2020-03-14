@@ -41,6 +41,7 @@
               <li class="list-group-item text-capitalize p-2">просмотры: <span class="h5">{{views}}</span></li>
               <li class="list-group-item text-capitalize p-2">автор: <a href="#" class="h5">{{author}}</a></li>
               <li class="list-group-item text-capitalize p-2">Год публикации: <a href="#" class="h5">{{year}}</a></li>
+              <li class="list-group-item text-capitalize p-2">Уровень: <a href="#" class="h5">{{dificult[level]}}</a></li>
               <li class="list-group-item text-capitalize p-2">Ссылка: <a href="#" class="h5">{{link}}</a></li>
             </ul>
           </div>
@@ -157,7 +158,12 @@
 <script>
   export default {
     props: {
-      title: String, views: Number, author: String, year: Number, link: String
+      title: String, views: Number, author: String, year: Number, level: Number, link: String
+    },
+    data() {
+      return {
+        dificult: ["Легкий", "Средний", "Высокий"]
+      }
     }
   }
 </script>

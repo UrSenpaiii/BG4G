@@ -88,21 +88,21 @@
   }
 }</script>
 <style lang="scss" scoped>
-@mixin icon-bg($icon, $ml, $size) {
+@mixin icon-bg($icon) {
   padding-left: 40px;
-  background: url(#{$img-path}icons/#{$icon}.png) $ml center / $size no-repeat;
+  background: url(#{$img-path}icons/#{$icon}.png);
 }
 
 .login-ico {
-  @include icon-bg(user, 2px, 34px)
+  @include icon-bg(user)
 }
 
 .email-ico {
-  @include icon-bg(email, 7px, 28px)
+  @include icon-bg(email)
 }
 
 .password-ico {
-  @include icon-bg(password, 5px, 28px)
+  @include icon-bg(password)
 }
 
 .ico-pos {

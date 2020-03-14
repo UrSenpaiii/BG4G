@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-8">
           <!--Type-->
-          <a href="/pages/catalog.html" class="text-uppercase">{{NAMES[this.type]}}</a>
+          <a :href="'/pages/catalog.html?type=' + type" class="text-uppercase">{{NAMES[this.type]}}</a>
           <!--Title-->
           <h2 class="mb-3 mt-1">
             <a href="/pages/current.html">{{title}}</a>
