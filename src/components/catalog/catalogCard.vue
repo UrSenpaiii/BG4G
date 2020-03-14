@@ -2,13 +2,14 @@
   <div class="col-3 p-3">
     <div class="card">
       <a href="/pages/current.html">
-        <img class="card-img-top" :src="'/assets/img/catalogImg/' + alias + '.png'" >
+        <!--<i class="fas fa-code position-absolute border"></i><i class="fab fa-diaspora"></i><i class="fas fa-laptop-code"></i><i class="fas fa-terminal"></i>-->
+        <img class="card-img-top border-bottom" :src="'/assets/img/catalog/' + alias + '/catalog.png'" height="133">
       </a>
       <div class="card-body pt-0">
-        <h3 class="mb-2"><a href="#">{{title}}</a></h3>
-        <a href="#">Видео: <b>{{videos}}</b> шт.</a>
+        <h3 class="my-1"><a href="/pages/current.html">{{title}}</a></h3>
+        <a href="/pages/current.html">Видео: <b>{{videos}}</b> шт.</a>
         <br>
-        <a href="#">Книги: <b>{{books}}</b> шт.</a>
+        <a href="/pages/current.html">Книги: <b>{{books}}</b> шт.</a>
         <br>
         <a href="/pages/current.html" class="btn btn-dark btn-block mt-3">Дай посмотрю</a>
       </div>

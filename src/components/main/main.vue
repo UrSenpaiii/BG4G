@@ -36,7 +36,7 @@
       <!--Block w/ cards-->
       <section class="container text-center">
         <h2 class="font-weight-light">Языки программирования</h2>
-        <h5 class="font-weight-light">и не только</h5>
+        <h5 class="font-weight-light mb-4">и не только</h5>
         <!--Cards-->
         <slot name="cards"></slot>
       </section>

@@ -5,10 +5,10 @@
       <div class="row">
         <div class="col-8">
           <!--Type-->
-          <a href="#" class="text-uppercase">{{NAMES[this.type]}}</a>
+          <a href="/pages/catalog.html" class="text-uppercase">{{NAMES[this.type]}}</a>
           <!--Title-->
-          <h2 class="mb-3 mt-1 text-capitalize">
-            <a href="/pages/current.html">{{alias}}</a>
+          <h2 class="mb-3 mt-1">
+            <a href="/pages/current.html">{{title}}</a>
           </h2>
           <!--Text-->
           <p class="text-muted">
@@ -43,7 +43,7 @@
           <a class="btn btn-dark" href="/pages/current.html">Узнать больше</a>
         </div>
         <!--Logo-->
-        <img class="col-4" :src="'/assets/img/indexImg/'+alias+'.svg'">
+        <img class="col-4" :src="'/assets/img/catalog/'+alias+'/index.svg'">
       </div>
     </div>
   </div>
@@ -52,12 +52,12 @@
 <script>
   export default {
     props: {
-      alias: String, type: Number, books: Number, videos: Number, time: Number, need: Boolean, link: String
+      alias: String, title: String, type: Number, books: Number, videos: Number, time: Number, need: Boolean, link: String
     },
     data() {
       return {
-        NAMES: ['Язык программирования', 'Фреймворк']
+        NAMES: ["", "Языки программирования", "Фреймворки", "OC", "Текстовые редакторы", "Другое"]
       }
-    }
+    },
   }
 </script>

@@ -10,91 +10,59 @@
     <v-modal-form></v-modal-form>
   </v-header>
   <v-main>
-    <v-canvas slot="canvas"></v-canvas>
-    <section slot="cards">
-      <v-index-card alias="c" :type="0" :books="4" :videos="5" :time="7" :need="true">
-        Си — компилируемый статически типизированный язык программирования общего назначения. Это устоявшийся в IT язык. Он широко используется в
-        desktop программах, для микроконтролеров, а в
-        неготорых случаях на нем можно писать игры.
+    <div slot="cards">
+      <v-index-card :alias="c.alias" :title="c.title" :type="c.type" :books="c.books.length" :videos="c.videos.length" :time="c.time" :need="c.need">
+        {{c.indexDescription}}
       </v-index-card>
-
-      <!--<card alias="php" type="язык программирования">-->
-      <!--PHP — это серверный язык программирования. Создан специально для бэкэнд-разработки. PHP популярен и проще для-->
-      <!--новичков, чем большинство других серверных языков. Slack, Wikipedia, Вконтакте используют PHP-->
-      <!--</card>-->
-      <!--<card alias="java" type="язык программирования">-->
-      <!--Java — универсальный язык программирования. Работает на любой архитектуре и может встраиваться в-->
-      <!--веб-приложения. Широко используется в разработке десктоп-, веб- и мобильных приложений, в банковской, научной-->
-      <!--и промышленной областях. А еще без него не работает Minecraft-->
-      <!--</card>-->
-      <!--<card alias="spring" type="фреймворк">-->
-      <!--Spring Framework (или коротко Spring) — универсальный фреймворк с открытым исходным кодом для Java-платформы.-->
-      <!--Что делает Spring, так это связывает классы с помощью XML файла или аннотаций, таким образом все объекты-->
-      <!--создаются и инициализируются Spring и внедряются в нужных местах-->
-      <!--</card>-->
-      <!--<card alias="javascript" type="язык программирования">-->
-      <!--JavaScript — главный язык программирования всех фронтэнд-разработчиков. Позволяет делать сайты динамичными и-->
-      <!--«живыми». Самый востребованный и наиболее простой язык новичкам для входа в индустрию-->
-      <!--</card>-->
-      <!--<card alias="node.js" type="фреймворк">-->
-      <!--Бэкэнд JavaScript — он же Node.js, расширил возможности JavaScript и сделал его также серверным языком-->
-      <!--программирования. Он помогает фронтэнду эффективно взаимодействовать с базой данных. Netflix, Uber, eBay-->
-      <!--используют Node.js в своих платформах-->
-      <!--</card>-->
-      <!--<card alias="jquery" type="фреймворк">-->
-      <!--А это уже FRONTEND фреймворк JavaScript — вездесущий jQuery. jQuery — набор функций JavaScript, фокусирующаяся-->
-      <!--на взаимодействии JavaScript и HTML. Библиотека jQuery помогает легко получать доступ к любому элементу DOM,-->
-      <!--обращаться к атрибутам и содержимому элементов DOM, манипулировать ими. Также библиотека jQuery предоставляет-->
-      <!--удобный API для работы с AJAX-->
-      <!--</card>-->
-      <!--<card alias="python" type="язык программирования">-->
-      <!--Python - один из самых популярных языков программирования. На нём разрабатывают искусственный интеллект,-->
-      <!--web-сайты, игры. Трудно найти другой язык, настолько широко используемый и при этом несложный в освоении - не-->
-      <!--зря Python используют в Google, Yandex, Dropbox!-->
-      <!--</card>-->
-      <!--<card alias="django" type="фреймворк">-->
-      <!--Django — свободный фреймворк для веб-приложений на языке Python, использующий шаблон проектирования MVC.-->
-      <!--Django является чрезвычайно популярным и полнофункциональным серверным веб-фреймворком, написанным на Python.-->
-      <!--В основном используется для бекенда на Python-->
-      <!--</card>-->
-      <!--<card alias="bootstrap" type="фреймворк">-->
-      <!--Bootstrap — свободный набор инструментов для создания сайтов и веб-приложений. Включает в себя HTML- и-->
-      <!--CSS-шаблоны оформления для типографики, веб-форм, кнопок, меток, блоков навигации и прочих компонентов-->
-      <!--веб-интерфейса, включая JS, вчастности jQuery, Но с 5 версии его уберут-->
-      <!--</card>-->
-      <!--<card alias="c++" type="язык программирования">-->
-      <!--Си++ (англ. C++) — компилируемый строго типизированный язык программирования общего назначения. Поддерживает-->
-      <!--разные парадигмы программирования: процедурную, обобщённую, функциональную; наибольшее внимание уделено-->
-      <!--поддержке объектно-ориентированного программирования-->
-      <!--</card>-->
-      <!--<card alias="html" type="язык разметки">-->
-      <!--HTML - это язык разметки гипертекста. По сути, HTML довольно простой язык, состоящий из элементов, которые-->
-      <!--могут быть применены к частям текста, чтобы придавать им различные значения, разделять документ на логические-->
-      <!--секции и добавлять контент на Вашу страницу, такой как фото и видео. Это каркас, который должен пройти каждый-->
-      <!--программист, связанный с WEB-->
-      <!--</card>-->
-      <!--<card alias="css" type="язык разметки">-->
-      <!--Какой же HTML без CSS. CSS - это каскадная таблица стилей. Преимущественно используется как средство описания,-->
-      <!--оформления внешнего вида веб-страницы. Это лицо сайта, с его помощью мы можем сверстать красивый и современный-->
-      <!--сайт. Цвета и позиционирование лишь необходимый минимум того, что может CSS.-->
-      <!--</card>-->
-      <!--<card alias="sass" type="язык разметки">-->
-      <!--Sass — это метаязык на основе CSS, предназначенный для увеличения уровня абстракции CSS кода и упрощения-->
-      <!--файлов каскадных таблиц стилей. Язык Sass имеет два синтаксиса: sass — отличается отсутствием фигурных скобок,-->
-      <!--в нём вложенные элементы реализованы с помощью отступов-->
-      <!--</card>-->
-      <!--<card alias="ruby" type="язык программирования">-->
-      <!--Ruby — динамический, рефлективный, интерпретируемый высокоуровневый язык программирования. Язык обладает-->
-      <!--независимой от операционной системы реализацией многопоточности, сильной динамической типизацией, сборщиком-->
-      <!--мусора и многими другими возможностями. Имеет замечательный фреймворк - Rails-->
-      <!--</card>-->
-      <!--<card alias="ruby on rails" type="язык разметки">-->
-      <!--Rails - это фреймворк, написанный на Ruby, реализует архитектурный шаблон Model-View-Controller для-->
-      <!--веб-приложений, а также обеспечивает их интеграцию с веб-сервером и сервером баз данных. Rails используют все-->
-      <!--— от стартапов и некоммерческих организаций до крупного бизнеса-->
-      <!--</card>-->
-
-    </section>
+      <v-index-card :alias="cpp.alias" :title="cpp.title" :type="cpp.type" :books="cpp.books.length" :videos="cpp.videos.length" :time="cpp.time" :need="cpp.need">
+        {{cpp.indexDescription}}
+      </v-index-card>
+      <v-index-card :alias="cSharp.alias" :title="cSharp.title" :type="cSharp.type" :books="cSharp.books.length" :videos="cSharp.videos.length" :time="cSharp.time" :need="cSharp.need">
+        {{cSharp.indexDescription}}
+      </v-index-card>
+      <v-index-card  :alias="php.alias" :title="php.title" :type="php.type" :books="php.books.length" :videos="php.videos.length" :time="php.time" :need="php.need">
+        {{php.indexDescription}}
+      </v-index-card>
+      <v-index-card :alias="java.alias" :title="java.title" :type="java.type" :books="java.books.length" :videos="java.videos.length" :time="java.time" :need="java.need">
+        {{java.indexDescription}}
+      </v-index-card>
+      <v-index-card :alias="java.frameworks.spring.alias" :title="java.frameworks.spring.title" :type="java.frameworks.spring.type" :books="java.frameworks.spring.books.length" :videos="java.frameworks.spring.videos.length" :time="java.frameworks.spring.time" :need="java.frameworks.spring.need">
+        {{java.frameworks.spring.indexDescription}}
+      </v-index-card>
+      <v-index-card :alias="js.alias" :title="js.title" :type="js.type" :books="js.books.length" :videos="js.videos.length" :time="js.time" :need="js.need">
+        {{js.indexDescription}}
+      </v-index-card>
+      <v-index-card :alias="js.frameworks.jquery.alias" :title="js.frameworks.jquery.title" :type="js.frameworks.jquery.type" :books="js.frameworks.jquery.books.length" :videos="js.frameworks.jquery.videos.length" :time="js.frameworks.jquery.time" :need="js.frameworks.jquery.need">
+        {{js.indexDescription}}
+      </v-index-card>
+      <v-index-card :alias="js.frameworks.node.alias" :title="js.frameworks.node.title" :type="js.frameworks.node.type" :books="js.frameworks.node.books.length" :videos="js.frameworks.node.videos.length" :time="js.frameworks.node.time" :need="js.frameworks.node.need">
+        {{js.frameworks.node.indexDescription}}
+      </v-index-card>
+      <v-index-card :alias="python.alias" :title="python.title" :type="python.type" :books="python.books.length" :videos="python.videos.length" :time="python.time" :need="python.need">
+        {{python.indexDescription}}
+      </v-index-card>
+      <v-index-card :alias="python.frameworks.django.alias" :title="python.frameworks.django.title" :type="python.frameworks.django.type" :books="python.frameworks.django.books.length" :videos="python.frameworks.django.videos.length" :time="python.frameworks.django.time" :need="python.frameworks.django.need">
+        {{python.frameworks.django.indexDescription}}
+      </v-index-card>
+      <v-index-card :alias="html.alias" :title="html.title" :type="html.type" :books="html.books.length" :videos="html.videos.length" :time="html.time" :need="html.need">
+        {{html.indexDescription}}
+      </v-index-card>
+      <v-index-card :alias="css.alias" :title="css.title" :type="css.type" :books="css.books.length" :videos="css.videos.length" :time="css.time" :need="css.need">
+        {{css.indexDescription}}
+      </v-index-card>
+      <v-index-card :alias="css.frameworks.bootstrap.alias" :title="css.frameworks.bootstrap.title" :type="css.frameworks.bootstrap.type" :books="css.frameworks.bootstrap.books.length" :videos="css.frameworks.bootstrap.videos.length" :time="css.frameworks.bootstrap.time" :need="css.frameworks.bootstrap.need">
+        {{css.frameworks.bootstrap.indexDescription}}
+      </v-index-card>
+      <v-index-card :alias="css.frameworks.sass.alias" :title="css.frameworks.sass.title" :type="css.frameworks.sass.type" :books="css.frameworks.sass.books.length" :videos="css.frameworks.sass.videos.length" :time="css.frameworks.sass.time" :need="css.frameworks.sass.need">
+        {{css.frameworks.sass.indexDescription}}
+      </v-index-card>
+      <v-index-card :alias="ruby.alias" :title="ruby.title" :type="ruby.type" :books="ruby.books.length" :videos="ruby.videos.length" :time="ruby.time" :need="ruby.need">
+        {{ruby.indexDescription}}
+      </v-index-card>
+      <v-index-card :alias="ruby.frameworks.rails.alias" :title="ruby.frameworks.rails.title" :type="ruby.frameworks.rails.type" :books="ruby.frameworks.rails.books.length" :videos="ruby.frameworks.rails.videos.length" :time="ruby.frameworks.rails.time" :need="ruby.frameworks.rails.need">
+        {{ruby.frameworks.rails.indexDescription}}
+      </v-index-card>
+    </div>
   </v-main>
   <v-footer></v-footer>
 </div>

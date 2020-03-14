@@ -5,7 +5,7 @@
       <aside class="col-3 border-right">
         <!--Sitemap-->
         <div class="p-3">
-          <h3>Все статьи</h3>
+          <h3 class="d-inline">Все статьи</h3> <i class="fas fa-project-diagram"></i>
           <ul class="mt-3">
             <!---->
             <slot name="sitemap"></slot>

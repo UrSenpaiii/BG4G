@@ -48,14 +48,14 @@
           <div class="tab-content">
             <!--Videos-->
             <div class="tab-pane fade show active" id="videos-frameworks">
-              <slot name="frameworksVideos"></slot>
+              <slot name="frameworkBlock"></slot>
             </div>
             <!--Books-->
             <div class="tab-pane fade" id="books-frameworks">
-              <slot name="frameworksVideos"></slot>
+              <slot name="frameworkBlock"></slot>
             </div>
-            <!---->
           </div>
+          <!---->
         </div>
       </div>
     </main>

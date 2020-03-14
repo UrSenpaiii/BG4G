@@ -31,9 +31,10 @@
     </div>
     <!--Answers-->
     <div v-if="answers">
-      <button @click="showAns" class="btn btn-block btn-outline-dark p-0"><i :class="'fas fa-caret-' + btnArrow"></i> Ответы ({{answers_count}})
+      <button @click="show = !show, btnArrow = !btnArrow" class="btn btn-block btn-outline-dark p-0">
+        <i :class="'fas fa-caret-' + [btnArrow ? 'up' : 'down']"></i> Ответы ({{answers_count}})
       </button>
-      <div v-if="showAnswers" class="border-left pl-5 my-3">
+      <div v-if="show" class="border-left pl-5 my-3">
         <slot name="answers"></slot>
       </div>
     </div>
@@ -62,14 +63,14 @@
         dislikeRated: false,
         like: this.rates[0],
         dislike: this.rates[1],
-        showAnswers: false,
+        show: false,
         btnArrow: "down",
       }
     },
     methods: {
       showAns() {
-        this.showAnswers = !this.showAnswers;
-        this.showAnswers ? this.btnArrow = "up" : this.btnArrow = "down"
+        this.show = !this.show;
+        this.show ? this.btnArrow = "up" : this.btnArrow = "down"
       },
       rateComment(i) {
         if (i) {

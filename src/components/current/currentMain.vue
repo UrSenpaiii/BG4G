@@ -27,6 +27,9 @@
         NEED_TYPES: ["", "Низкая", "Средняя", "Высокая"],
         LEVEL_TYPES: ["", "Низкоуровневый", "Среднеуровневый", "Высокоуровневый"]
       }
+    },
+    mounted() {
+      this.$on("lol", console.log(this.title))
     }
   }
 </script>
