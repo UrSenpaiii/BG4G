@@ -11,8 +11,7 @@
         </label>
       </div>
       <div class="row col-12">
-        <v-catalog-card v-for="(e, i) in list" :key="i" :alias="e.alias" :title="e.title" :videos="e.videos"
-                        :books="e.books"></v-catalog-card>
+        <v-catalog-card v-for="(e, i) in list" :key="i" :alias="e.alias" :title="e.title" :videos="e.videos" :books="e.books"></v-catalog-card>
       </div>
     </main>
   </section>
@@ -37,7 +36,7 @@
         for (let key in DATA) {
           let e = DATA[key];
           if (this.selected === 0 || this.selected === e.type)
-            result.push({alias: e.alias, title: e.title, videos: e.videos.length, books: e.books.length});
+            result.push({alias: e.alias, title: e.title, videos: Object.keys(e.videos).length, books: Object.keys(e.books).length});
           if (!e.frameworks || (this.selected !== 2 && this.selected !== 0)) continue;
           for (let k in e.frameworks) {
             let f = e.frameworks[k];

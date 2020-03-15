@@ -2,7 +2,6 @@
   <div class="col-3 p-3">
     <div class="card">
       <a :href="'/pages/current.html?alias=' + alias">
-        <!--<i class="fas fa-code position-absolute border"></i><i class="fab fa-diaspora"></i><i class="fas fa-laptop-code"></i><i class="fas fa-terminal"></i>-->
         <img class="card-img-top border-bottom" :src="'/assets/img/catalog/' + alias + '/catalog.png'" height="133">
       </a>
       <div class="card-body pt-0">
