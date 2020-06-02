@@ -2,16 +2,15 @@
   <div id="app" class="card m-3 px-3">
     <div class="card-body">
       <div class="row">
-        <a :href="'/pages/article.html?alias=' + PARAMS.alias + '&current=' + alias + '&support=' + support">
+        <a href="/pages/article.html">
           <img width="200" class="border" :src="'/assets/img/catalog/' + alias + '.png'">
         </a>
         <div class="col-7">
-          <a :href="'/pages/article.html?alias=' + PARAMS.alias + '&current=' + alias + '&support=' + support" class="h3">{{title}}</a>
+          <a href="/pages/article.html" class="h3">{{title}}</a>
           <div class="text-capitalize h5 mt-2">Автор: {{author}}</div>
         </div>
-        <div class="text-muted my-2" v-html="description">
-        </div>
-        <a class="btn btn-dark" :href="'/pages/article.html?alias=' + PARAMS.alias + '&current=' + alias + '&support=' + support">Узнать больше</a>
+        <div class="text-muted my-2" v-html="description"></div>
+        <a class="btn btn-dark" href="/pages/article.html">Узнать больше</a>
       </div>
     </div>
   </div>

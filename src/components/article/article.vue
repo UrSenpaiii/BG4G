@@ -25,15 +25,15 @@
         <section class="row ml-0 pt-4">
           <!--Poster-->
           <div class="col-5 row">
-            <img :src="'/assets/img/catalog/' + PARAMS.current + '.png'" class="w-100 border border-bottom-0">
-            <!--<button class="small rounded-0 btn-outline-dark text-capitalize text-center p-0 border col line-h">смотрю-->
-            <!--</button>-->
-            <!--<button class="small rounded-0 btn-outline-dark text-capitalize text-center p-0 border col line-h">-->
-            <!--посмотрю-->
-            <!--</button>-->
-            <!--<button class="small rounded-0 btn-outline-dark text-capitalize text-center p-0 border col line-h">-->
-            <!--посмотрел -->
-            <!--</button>-->
+            <img :src="'/assets/img/catalog/' + LOL + '.png'" class="w-100 border border-bottom-0">
+            <button class="small rounded-0 btn-outline-dark text-capitalize text-center p-0 border col line-h">смотрю
+            </button>
+            <button class="small rounded-0 btn-outline-dark text-capitalize text-center p-0 border col line-h">
+            посмотрю
+            </button>
+            <button class="small rounded-0 btn-outline-dark text-capitalize text-center p-0 border col line-h">
+            посмотрел
+            </button>
           </div>
           <!--Specifications-->
           <div class="col-7">
@@ -41,7 +41,7 @@
               <!--<li class="list-group-item text-capitalize p-2">просмотры: <span class="h5">{{views}}</span></li>-->
               <li class="list-group-item text-capitalize p-2">автор: <a href="#" class="h5">{{obj.author}}</a></li>
               <li class="list-group-item text-capitalize p-2">Год публикации: <a href="#" class="h5">{{obj.year}}</a></li>
-              <li class="list-group-item text-capitalize p-2">Уровень: <a href="#" class="h5">{{obj.dificult[level]}}</a></li>
+              <li class="list-group-item text-capitalize p-2">Уровень: <a href="#" class="h5">{{obj.difficult[level]}}</a></li>
               <li class="list-group-item text-capitalize p-2"><a :href="obj.link" class="h5">Ссылка</a></li>
             </ul>
           </div>
@@ -51,10 +51,13 @@
           <p v-html="obj.description"></p>
           <!--Video/Book-->
           <section class="d-flex justify-content-center">
-            <!--<div class="d-flex align-items-center parent">-->
-              <!--<img src="/assets/img/icons/arrow-left.png" class="img-lighter" width="40">-->
-            <!--</div>-->
+            <!--Change arrow left-->
+            <div class="d-flex align-items-center parent">
+              <img src="/assets/img/icons/arrow-left.png" class="img-lighter" width="40">
+            </div>
+            <!--Video-->
             <iframe class="mx-3" width="640" height="360" :src="obj.link" allowfullscreen></iframe>
+            <!--Book text-->
             <!--<div class="border inset mx-1 p-3">-->
               <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos iure obcaecati perspiciatis placeat-->
               <!--repellat, velit. Animi-->
@@ -97,22 +100,23 @@
               <!--numquam odit placeat porro praesentium quam repellat sed sequi suscipit temporibus tenetur vitae voluptas-->
               <!--voluptatem? Consequuntur.-->
             <!--</div>-->
-            <!--<div class="d-flex align-items-center parent">-->
-              <!--<img src="/assets/img/icons/arrow-right.png" width="40">-->
-            <!--</div>-->
+            <!--Change arrow right-->
+            <div class="d-flex align-items-center parent">
+              <img src="/assets/img/icons/arrow-right.png" width="40">
+            </div>
           </section>
           <!--Pagination-->
-          <!--<ul class="pagination justify-content-center">-->
-            <!--<li class="page-item">-->
-              <!--<a class="page-link" href="#">&laquo;</a>-->
-            <!--</li>-->
-            <!--<li class="page-item"><a class="page-link" href="#">1</a></li>-->
-            <!--<li class="page-item"><a class="page-link active" href="#">2</a></li>-->
-            <!--<li class="page-item"><a class="page-link" href="#">3</a></li>-->
-            <!--<li class="page-item">-->
-              <!--<a class="page-link" href="#">&raquo;</a>-->
-            <!--</li>-->
-          <!--</ul>-->
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="#">&laquo;</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link active" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">&raquo;</a>
+            </li>
+          </ul>
         </section>
         <!--The Same pages-->
         <section class="border-top">
@@ -133,24 +137,24 @@
           </div>
         </section>
         <!--Comments-->
-        <!--<section class="border-top">-->
-          <!--<div class="h4">Комментарии</div>-->
-          <!--&lt;!&ndash;Comments input&ndash;&gt;-->
-          <!--<section class="border-top border-bottom">-->
-            <!--<div class="form-group">-->
-              <!--<label for="comment" class="h5">Напиши свой комментарий:</label>-->
-              <!--<textarea class="form-control p-2" rows="4" id="comment" placeholder="Comment's text"></textarea>-->
-            <!--</div>-->
-            <!--<div class="d-flex justify-content-between">-->
-              <!--<div>[bbcode]</div>-->
-              <!--<button class="btn btn-dark">Отправить</button>-->
-            <!--</div>-->
-          <!--</section>-->
-          <!--<section>-->
-            <!--&lt;!&ndash;Other comments&ndash;&gt;-->
-            <!--<slot name="comment"></slot>-->
-          <!--</section>-->
-        <!--</section>-->
+        <section class="border-top">
+          <div class="h4">Комментарии</div>
+          <!--Comments input-->
+          <section class="border-top border-bottom">
+            <div class="form-group">
+              <label for="comment" class="h5">Напиши свой комментарий:</label>
+              <textarea class="form-control p-2" rows="4" id="comment" placeholder="Comment's text"></textarea>
+            </div>
+            <div class="d-flex justify-content-between">
+              <div>[bbcode]</div>
+              <button class="btn btn-dark">Отправить</button>
+            </div>
+          </section>
+          <section>
+            <!--Other comments-->
+            <slot name="comment"></slot>
+          </section>
+        </section>
       </article>
     </main>
   </section>
@@ -163,13 +167,9 @@
     data() {
       return {
         obj: null,
-        dificult: ["Легкий", "Средний", "Высокий"]
+        difficult: ["Легкий", "Средний", "Высокий"]
       }
     },
-    mounted() {
-      let cr = PARAMS.current.split('/');
-      this.obj = DATA[PARAMS.alias][PARAMS.support][cr[cr.length-1]]
-    }
   }
 </script>
 <style lang="scss" scoped>

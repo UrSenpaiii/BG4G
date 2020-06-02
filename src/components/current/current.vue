@@ -5,7 +5,9 @@
       <aside class="nav flex-column col-2 p-0 border-right">
         <a class="nav-link active" data-toggle="pill" href="#main">Главное</a>
         <a class="nav-link" data-toggle="pill" href="#basics">Основы</a>
-        <a class="nav-link" data-toggle="pill" href="#frameworks">{{DATA[PARAMS.alias].type === 4 ? "Плагины" : "Фреймворки"}}</a>
+        <a class="nav-link" data-toggle="pill" href="#frameworks">
+          <!--{{DATA[PARAMS.alias].type === 4 ? "Плагины" : "Фреймворки"}}-->
+        </a>
       </aside>
       <div class="tab-content col-10 p-0">
         <!--Main-->
@@ -20,17 +22,21 @@
               <a class="nav-link border-left-0 active" style="border-top-left-radius: 0;" data-toggle="tab" href="#videos-basic">Видео</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#books-basic">{{DATA[PARAMS.alias].type === 4 ? "Статьи" : "Книги"}}</a>
+              <a class="nav-link" data-toggle="tab" href="#books-basic">
+                <!--{{DATA[PARAMS.alias].type === 4 ? "Статьи" : "Книги"}}-->
+              </a>
             </li>
           </ul>
           <div class="tab-content">
             <!--Videos-->
             <div class="tab-pane fade show active" id="videos-basic">
-              <v-current-card v-for="(e, i) in listVideos" :key="i" :alias="e.alias" :title="e.title" :author="e.author" :description="e.description" support="videos"></v-current-card>
+              <v-current-card></v-current-card>
+              <!--v-for="(e, i) in listVideos" :key="i" :alias="e.alias" :title="e.title" :author="e.author" :description="e.description" support="videos"-->
             </div>
             <!--Books-->
             <div class="tab-pane fade" id="books-basic">
-              <v-current-card v-for="(e, i) in listBooks" :key="i" :alias="e.alias" :title="e.title" :author="e.author" :description="e.description" support="books"></v-current-card>
+              <v-current-card></v-current-card>
+              <!--v-for="(e, i) in listBooks" :key="i" :alias="e.alias" :title="e.title" :author="e.author" :description="e.description" support="books"-->
             </div>
           </div>
         </div>
@@ -42,7 +48,9 @@
               <a class="nav-link active  border-left-0" style="border-top-left-radius: 0;" data-toggle="tab" href="#videos-frameworks">Видео</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#books-frameworks">{{DATA[PARAMS.alias].type === 4 ? "Статьи" : "Книги"}}</a>
+              <a class="nav-link" data-toggle="tab" href="#books-frameworks">
+                <!--{{DATA[PARAMS.alias].type === 4 ? "Статьи" : "Книги" }}-->
+              </a>
             </li>
           </ul>
           <div class="tab-content">
@@ -64,26 +72,20 @@
 
 <script>
   export default {
+    data() {
+      return {
+      DATA: null
+      }
+    },
     mounted() {
-      console.log(DATA[PARAMS.alias].videos)
+      bus.$on("contentObjToCurrent", (contentObj) => {
+        console.log(contentObj);
+        this.DATA = contentObj;
+      });
+      console.log(this.DATA)
     },
     computed: {
-      listVideos() {
-        let result = [];
-        for (let key in DATA[PARAMS.alias].videos) {
-          let e = DATA[PARAMS.alias].videos[key];
-          result.push({alias: e.alias, title: e.title, author: e.author, description: e.description});
-        }
-        return result;
-      },
-      listBooks() {
-        let result = [];
-        for (let key in DATA[PARAMS.alias].videos) {
-          let e = DATA[PARAMS.alias].videos[key];
-          result.push({alias: e.alias, title: e.title, author: e.author, description: e.description});
-        }
-        return result;
-      },
+
     }
   }
 </script>

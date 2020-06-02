@@ -9,61 +9,13 @@
   <v-header>
     <v-modal-form></v-modal-form>
   </v-header>
-  <v-main>
+  <v-index>
     <div slot="cards">
       <v-index-card :alias="c.alias" :title="c.title" :type="c.type" :books="c.books.length" :videos="c.videos.length" :time="c.time" :need="c.need">
         {{c.indexDescription}}
       </v-index-card>
-      <v-index-card :alias="cpp.alias" :title="cpp.title" :type="cpp.type" :books="cpp.books.length" :videos="cpp.videos.length" :time="cpp.time" :need="cpp.need">
-        {{cpp.indexDescription}}
-      </v-index-card>
-      <v-index-card :alias="cSharp.alias" :title="cSharp.title" :type="cSharp.type" :books="cSharp.books.length" :videos="cSharp.videos.length" :time="cSharp.time" :need="cSharp.need">
-        {{cSharp.indexDescription}}
-      </v-index-card>
-      <v-index-card  :alias="php.alias" :title="php.title" :type="php.type" :books="php.books.length" :videos="php.videos.length" :time="php.time" :need="php.need">
-        {{php.indexDescription}}
-      </v-index-card>
-      <v-index-card :alias="java.alias" :title="java.title" :type="java.type" :books="java.books.length" :videos="java.videos.length" :time="java.time" :need="java.need">
-        {{java.indexDescription}}
-      </v-index-card>
-      <v-index-card :alias="java.frameworks.spring.alias" :title="java.frameworks.spring.title" :type="java.frameworks.spring.type" :books="java.frameworks.spring.books.length" :videos="java.frameworks.spring.videos.length" :time="java.frameworks.spring.time" :need="java.frameworks.spring.need">
-        {{java.frameworks.spring.indexDescription}}
-      </v-index-card>
-      <v-index-card :alias="js.alias" :title="js.title" :type="js.type" :books="js.books.length" :videos="js.videos.length" :time="js.time" :need="js.need">
-        {{js.indexDescription}}
-      </v-index-card>
-      <v-index-card :alias="js.frameworks.jquery.alias" :title="js.frameworks.jquery.title" :type="js.frameworks.jquery.type" :books="js.frameworks.jquery.books.length" :videos="js.frameworks.jquery.videos.length" :time="js.frameworks.jquery.time" :need="js.frameworks.jquery.need">
-        {{js.indexDescription}}
-      </v-index-card>
-      <v-index-card :alias="js.frameworks.node.alias" :title="js.frameworks.node.title" :type="js.frameworks.node.type" :books="js.frameworks.node.books.length" :videos="js.frameworks.node.videos.length" :time="js.frameworks.node.time" :need="js.frameworks.node.need">
-        {{js.frameworks.node.indexDescription}}
-      </v-index-card>
-      <v-index-card :alias="python.alias" :title="python.title" :type="python.type" :books="python.books.length" :videos="python.videos.length" :time="python.time" :need="python.need">
-        {{python.indexDescription}}
-      </v-index-card>
-      <v-index-card :alias="python.frameworks.django.alias" :title="python.frameworks.django.title" :type="python.frameworks.django.type" :books="python.frameworks.django.books.length" :videos="python.frameworks.django.videos.length" :time="python.frameworks.django.time" :need="python.frameworks.django.need">
-        {{python.frameworks.django.indexDescription}}
-      </v-index-card>
-      <v-index-card :alias="html.alias" :title="html.title" :type="html.type" :books="html.books.length" :videos="html.videos.length" :time="html.time" :need="html.need">
-        {{html.indexDescription}}
-      </v-index-card>
-      <v-index-card :alias="css.alias" :title="css.title" :type="css.type" :books="css.books.length" :videos="css.videos.length" :time="css.time" :need="css.need">
-        {{css.indexDescription}}
-      </v-index-card>
-      <v-index-card :alias="css.frameworks.bootstrap.alias" :title="css.frameworks.bootstrap.title" :type="css.frameworks.bootstrap.type" :books="css.frameworks.bootstrap.books.length" :videos="css.frameworks.bootstrap.videos.length" :time="css.frameworks.bootstrap.time" :need="css.frameworks.bootstrap.need">
-        {{css.frameworks.bootstrap.indexDescription}}
-      </v-index-card>
-      <v-index-card :alias="css.frameworks.sass.alias" :title="css.frameworks.sass.title" :type="css.frameworks.sass.type" :books="css.frameworks.sass.books.length" :videos="css.frameworks.sass.videos.length" :time="css.frameworks.sass.time" :need="css.frameworks.sass.need">
-        {{css.frameworks.sass.indexDescription}}
-      </v-index-card>
-      <v-index-card :alias="ruby.alias" :title="ruby.title" :type="ruby.type" :books="ruby.books.length" :videos="ruby.videos.length" :time="ruby.time" :need="ruby.need">
-        {{ruby.indexDescription}}
-      </v-index-card>
-      <v-index-card :alias="ruby.frameworks.rails.alias" :title="ruby.frameworks.rails.title" :type="ruby.frameworks.rails.type" :books="ruby.frameworks.rails.books.length" :videos="ruby.frameworks.rails.videos.length" :time="ruby.frameworks.rails.time" :need="ruby.frameworks.rails.need">
-        {{ruby.frameworks.rails.indexDescription}}
-      </v-index-card>
     </div>
-  </v-main>
+  </v-index>
   <v-footer></v-footer>
 </div>
 </body>

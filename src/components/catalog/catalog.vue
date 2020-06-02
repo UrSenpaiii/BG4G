@@ -11,7 +11,7 @@
         </label>
       </div>
       <div class="row col-12">
-        <v-catalog-card v-for="(e, i) in list" :key="i" :alias="e.alias" :title="e.title" :videos="e.videos" :books="e.books"></v-catalog-card>
+        <v-catalog-card v-for="(e, i) in list" :key="i" :contentObj="e"></v-catalog-card>
       </div>
     </main>
   </section>
@@ -25,22 +25,25 @@
         options: [
           "Все", "Языки программирования", "Фреймворки", "OC", "Текстовые редакторы", "Другое"
         ],
+        DATA: null,
       }
     },
-    created() {
-      PARAMS[0] === undefined ? this.selected = 0 : this.selected = PARAMS.type
+    mounted() {
+      bus.$on("catalogDATA", (DATAs) => {
+        this.DATA = DATAs;
+      })
     },
     computed: {
       list() {
         let result = [];
-        for (let key in DATA) {
-          let e = DATA[key];
+        for (let key in this.DATA) {
+          let e = this.DATA[key];
           if (this.selected === 0 || this.selected === e.type)
-            result.push({alias: e.alias, title: e.title, videos: Object.keys(e.videos).length, books: Object.keys(e.books).length});
+            result.push(e);
           if (!e.frameworks || (this.selected !== 2 && this.selected !== 0)) continue;
           for (let k in e.frameworks) {
             let f = e.frameworks[k];
-            result.push({alias: f.alias, title: f.title, videos: f.videos.length, books: f.books.length});
+            result.push(e);
           }
         }
         return result;

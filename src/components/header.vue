@@ -31,14 +31,14 @@
             </li>
           </ul>
           <!--Search Block-->
-          <!--<form class="form-inline input-group search-block-weight mr-4">-->
-            <!--<input type="search" class="form-control border-dark search-block-height" placeholder="Поиск">-->
-            <!--<div class="input-group-append">-->
-              <!--<button class="btn btn-outline-dark fa fa-search search-block-height" type="submit" title="Искать"></button>-->
-            <!--</div>-->
-          <!--</form>-->
+          <form class="form-inline input-group search-block-weight mr-4">
+            <input type="search" class="form-control border-dark search-block-height" placeholder="Поиск">
+            <div class="input-group-append">
+              <button class="btn btn-outline-dark fa fa-search search-block-height" type="submit" title="Искать"></button>
+            </div>
+          </form>
           <!--Modal/User block-->
-          <!--<slot></slot>-->
+          <slot></slot>
         </div>
       </nav>
     </div>

@@ -1,22 +1,24 @@
 <template>
   <div class="row">
     <div class="col-12 p-4">
-      <img width="500" class="float-left mr-3" :src="'/assets/img/catalog/' + DATA[PARAMS.alias].alias + '/main.png'">
+      <img width="500" class="float-left mr-3" :src="'/assets/img/catalog/' + alias + '/main.png'">
       <ul class="list-group">
-        <li class="list-group-item">Язык программирования: <a href="#" class="h5">{{DATA[PARAMS.alias].title}}</a></li>
-        <li class="list-group-item">Направленность: <a href="#" class="h5" id="">{{DATA[PARAMS.alias].for_what}}</a></li>
-        <li class="list-group-item">Тип: <a href="#" :class="['h5', CLASSES[DATA[PARAMS.alias].level_type]]">{{LEVEL_TYPES[DATA[PARAMS.alias].level_type]}}</a></li>
-        <li class="list-group-item">Востребовательность: <a href="#" :class="['h5', DATA[PARAMS.alias].need ? 'text-success' : 'text-warning']">{{DATA[PARAMS.alias].need ? 'Высокая' : 'Средняя'}}</a></li>
-        <li class="list-group-item">Подходит новичкам: <a href="#" :class="['h5', DATA[PARAMS.alias].suitable ? 'text-success' : 'text-danger']">{{DATA[PARAMS.alias].suitable ? "Да" : "Нет"}}</a></li>
+        <li class="list-group-item">Язык программирования: <a href="#" class="h5">{{title}}</a></li>
+        <li class="list-group-item">Направленность: <a href="#" class="h5" id="">{{for_what}}</a></li>
+        <li class="list-group-item">Тип: <a href="#" :class="['h5', CLASSES[level_type]]">{{level_type}}</a></li>
+        <li class="list-group-item">Востребовательность: <a href="#" :class="['h5', need ? 'text-success' : 'text-warning']">{{need ? 'Высокая' : 'Средняя'}}</a></li>
+        <li class="list-group-item">Подходит новичкам: <a href="#" :class="['h5', suitable ? 'text-success' : 'text-danger']">{{suitable ? "Да" : "Нет"}}</a></li>
       </ul>
-      <div class="mt-2" v-html="DATA[PARAMS.alias].mainDescription">
-      </div>
+      <div class="mt-2" v-html="mainDescription"></div>
     </div>
   </div>
 </template>
 
 <script>
   export default {
+    props: {
+      title: String, for_what: Number, level_type: Number, need: Boolean, suitable: Boolean, mainDescription: String
+    },
     data() {
       return {
         CLASSES: ["text-danger", "text-warning", "text-success"],
