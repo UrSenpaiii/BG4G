@@ -1,5 +1,6 @@
 const merge = require("webpack-merge");
 const baseWebpackConfig = require("./webpack.base.conf");
+
 const ImageMinPlugin = require('imagemin-webpack-plugin').default;
 
 const buildWebpackConfig = merge(baseWebpackConfig, {

@@ -1,22 +1,39 @@
-const express = require('express');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 
-const app = express();
 const config = require('./build/webpack.base.conf');
 const compiler = webpack(config);
 
-// Tell express to use the webpack-dev-middleware and use the webpack.config.js
-// configuration file as a base.
+const express = require('express');
+const app = express();
+
 app.use(webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath,
 }));
 
-app.get('/hi', function (req, res) {
+app.get('/pages/current.html', function (req, res) {
   res.send('Hello World!');
 });
 
-// Serve the files on port 3000.
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!\n');
+});
+
+//MySQL для переноса данных и подключение бд к сайту через express!!!!!!!!!!
+
+const mysql = require('mysql');
+let connection = mysql.createConnection({
+  host : 'localhost',
+  user : 'root',
+  database: "4greens",
+  password : ''
+});
+
+connection.connect(function(err){
+  if (err) {
+return console.error("Ошибка: " + err.message);
+}
+else{
+  console.log("Подключение к серверу MySQL успешно установлено");
+}
 });

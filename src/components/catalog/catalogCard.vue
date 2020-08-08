@@ -10,7 +10,7 @@
         <br>
         <a href="/pages/current.html">Книги: <b>{{Object.keys(contentObj.videos).length}}</b> шт.</a>
         <br>
-        <a href="/pages/current.html" @click="send" class="btn btn-dark btn-block mt-3">Дай посмотрю</a>
+        <a href="/pages/current.html" class="btn btn-dark btn-block mt-3">Дай посмотрю</a>
       </div>
     </div>
   </div>
@@ -20,11 +20,6 @@
   export default {
     props: {
       contentObj: Object
-    },
-    methods: {
-      send() {
-        bus.$emit("contentObjToCurrent", this.contentObj)
-      }
     },
   }
 </script>

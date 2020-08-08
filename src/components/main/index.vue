@@ -10,7 +10,6 @@
             <a class="btn btn-dark btn-lg btn-block" href="#">Хочу стать хацкером!</a>
           </div>
         </div>
-        (<a href="#" class="my-3">не хочу ничего читать, покажи видосы!</a>)
       </section>
       <!--Main art/Canvas-->
       <!--<slot name="canvas"></slot>-->

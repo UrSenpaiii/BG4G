@@ -23,7 +23,7 @@
       return {
         selected: 0,
         options: [
-          "Все", "Языки программирования", "Фреймворки", "OC", "Текстовые редакторы", "Другое"
+          "Все", "Языки программирования", "OC", "Текстовые редакторы", "Другое"
         ],
         DATA: null,
       }
@@ -40,11 +40,11 @@
           let e = this.DATA[key];
           if (this.selected === 0 || this.selected === e.type)
             result.push(e);
-          if (!e.frameworks || (this.selected !== 2 && this.selected !== 0)) continue;
-          for (let k in e.frameworks) {
-            let f = e.frameworks[k];
-            result.push(e);
-          }
+          // if (!e.frameworks || (this.selected !== 2 && this.selected !== 0)) continue;
+          // for (let k in e.frameworks) {
+          //   let f = e.frameworks[k];
+          //   result.push(e);
+          // }
         }
         return result;
       }

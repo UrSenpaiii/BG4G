@@ -22,9 +22,7 @@
               <a class="nav-link border-left-0 active" style="border-top-left-radius: 0;" data-toggle="tab" href="#videos-basic">Видео</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#books-basic">
-                <!--{{DATA[PARAMS.alias].type === 4 ? "Статьи" : "Книги"}}-->
-              </a>
+              <a class="nav-link" data-toggle="tab" href="#books-basic">Книги</a>
             </li>
           </ul>
           <div class="tab-content">
@@ -48,9 +46,7 @@
               <a class="nav-link active  border-left-0" style="border-top-left-radius: 0;" data-toggle="tab" href="#videos-frameworks">Видео</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="tab" href="#books-frameworks">
-                <!--{{DATA[PARAMS.alias].type === 4 ? "Статьи" : "Книги" }}-->
-              </a>
+              <a class="nav-link" data-toggle="tab" href="#books-frameworks">Книги</a>
             </li>
           </ul>
           <div class="tab-content">
@@ -77,16 +73,6 @@
       DATA: null
       }
     },
-    mounted() {
-      bus.$on("contentObjToCurrent", (contentObj) => {
-        console.log(contentObj);
-        this.DATA = contentObj;
-      });
-      console.log(this.DATA)
-    },
-    computed: {
-
-    }
   }
 </script>
 
