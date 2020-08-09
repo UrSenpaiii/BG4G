@@ -2,15 +2,14 @@
 import 'jquery'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
+// SCSS
+import './assets/scss/index.scss'
+// JS
+import './js/'
 
 // Vue.js
 window.Vue = require('vue');
 
-// SCSS
-import './assets/scss/index.scss'
-
-// JS
-import './js/'
 
 global.$ = function (selector, startNode) {
   if (selector.length < 1) return null;
