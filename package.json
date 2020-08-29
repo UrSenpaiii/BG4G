@@ -9,7 +9,7 @@
   "homepage": "https://bitbucket.org/FiNaLiZee/4greens.com",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config ./build/webpack.dev.conf.js",
+    "watch": "webpack-dev-server --config ./build/webpack.dev.conf.js",
     "build": "rimraf dist && webpack --config ./build/webpack.build.conf.js",
     "server": "node server.js webpack --mode=development"
   },
