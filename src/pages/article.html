@@ -9,7 +9,25 @@
   <v-header>
     <v-modal-form></v-modal-form>
   </v-header>
-  <v-article title="C" :views="321" author="Vasya Pupkin" :year="2018" :level="1" link="#">
+  <v-article title="C за час" :views="321" author="Vasya Pupkin" :year="2018" :level="1">
+    <v-sitemap slot="sitemap" :sub="true">
+      fuck u!
+      <v-sitemap slot="subItem" :sub="true">
+        <v-sitemap slot="subItem">
+        </v-sitemap>
+      </v-sitemap>
+    </v-sitemap>
+    <v-sitemap slot="sitemap" :sub="true">
+      <v-sitemap slot="subItem">
+      </v-sitemap>
+    </v-sitemap>
+    <v-sitemap slot="sitemap">
+      fuck me
+    </v-sitemap>
+    <p slot="description">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, beatae deleniti eaque expedita impedit ipsum laborum libero maiores modi obcaecati optio porro, quaerat, ratione reiciendis repudiandae sequi
+      similique tempore ullam.
+    </p>
     <v-carousel-item slot="carouselItem" active="active">
       <v-carousel-card slot="carouselCard" title="Lang Title" author="Roberto Dovinchy"></v-carousel-card>
       <v-carousel-card slot="carouselCard" title="Lang Title" author="Roberto Dovinchy"></v-carousel-card>
@@ -20,6 +38,18 @@
       <v-carousel-card slot="carouselCard" title="Lang Title" author="Roberto Dovinchy"></v-carousel-card>
       <v-carousel-card slot="carouselCard" title="Lang Title" author="Roberto Dovinchy"></v-carousel-card>
     </v-carousel-item>
+    <v-comment slot="comment" user_name="ABRAHAM Lolikon" comment_data="12 Августа в 14:54" :rates="[2, 3]" :answers="1">
+      <p slot="commentText">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto beatae commodi dolorem ducimus earum hic reprehenderit voluptate! Culpa deleniti dolores harum hic officia officiis omnis suscipit
+        temporibus unde veniam!
+      </p>
+      <v-comment slot="answers" user_name="ABRAHAM's son" comment_data="Вчера в 2:05">
+        <p slot="commentText">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto beatae commodi dolorem ducimus earum hic reprehenderit voluptate! Culpa deleniti dolores harum hic officia officiis omnis suscipit
+          temporibus unde veniam!
+        </p>
+      </v-comment>
+    </v-comment>
   </v-article>
   <v-footer></v-footer>
 </div>

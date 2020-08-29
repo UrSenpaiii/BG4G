@@ -5,9 +5,7 @@
       <aside class="nav flex-column col-2 p-0 border-right">
         <a class="nav-link active" data-toggle="pill" href="#main">Главное</a>
         <a class="nav-link" data-toggle="pill" href="#basics">Основы</a>
-        <a class="nav-link" data-toggle="pill" href="#frameworks">
-          <!--{{DATA[PARAMS.alias].type === 4 ? "Плагины" : "Фреймворки"}}-->
-        </a>
+        <a class="nav-link" data-toggle="pill" href="#frameworks">Фреймворки</a>
       </aside>
       <div class="tab-content col-10 p-0">
         <!--Main-->

@@ -4,7 +4,7 @@
     <i :class="iconsColor + ' fa-folder mr-1'" @click="showSubBlock()" :title="icoTitle"></i>
     <!--Link-->
     <a :href="link">
-      <slot name="sitemapItemText"></slot>
+      <slot>example</slot>
     </a>
     <!--Sub-->
     <ul class="sub-list" v-if="sub && showSub">

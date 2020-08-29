@@ -32,7 +32,7 @@
     <!--Answers-->
     <div v-if="answers">
       <button @click="show = !show, btnArrow = !btnArrow" class="btn btn-block btn-outline-dark p-0">
-        <i :class="'fas fa-caret-' + [btnArrow ? 'up' : 'down']"></i> Ответы ({{answers_count}})
+        <i :class="'fas fa-caret-' + [btnArrow ? 'up' : 'down']"></i> Ответы ({{answers}})
       </button>
       <div v-if="show" class="border-left pl-5 my-3">
         <slot name="answers"></slot>
@@ -43,19 +43,11 @@
 
 <script>
   export default {
-    props: {
-      user_name: String,
-      comment_data: String,
-      rates: {
-        type: Array,
-        default: 0,
+    props: {user_name: String, comment_data: String, rates: {type: Array, default: () => (["0", "0"])}, commentText: String,answers: {type: Number, default: 0}},
+    filters: {
+      cut(text) {
+        return text.slice(0, 111) + "...";
       },
-      commentText: String,
-      answers: {
-        type: Number,
-        default: 0
-      },
-      answers_count: Number
     },
     data() {
       return {

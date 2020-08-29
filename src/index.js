@@ -1,40 +1,36 @@
-// Bootstrap
+/* Bootstrap*/
 import 'jquery'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
-// SCSS
+/* SCSS*/
 import './assets/scss/index.scss'
-// JS
+/* JS*/
 import './js/'
-
-// Vue.js
+/* Vue.js*/
 window.Vue = require('vue');
-
-
 global.$ = function (selector, startNode) {
   if (selector.length < 1) return null;
   let node = (startNode) ? startNode : document;
   let pref = selector[0], value = selector.substr(1);
-  if (pref === "#") return node.getElementById(value);
-  else if (pref === ".") return node.getElementsByClassName(value);
-  else if (pref === "^") return node.getElementsByName(value);
-  else if (pref === "_") return node.getElementsByTagName(value);
-  else return node.getElementById(selector);
+  if (pref === "#") return node.getElementById(value); else if (pref === ".") return node.getElementsByClassName(value); else if (pref === "^") return node.getElementsByName(value); else if (pref === "_") return node.getElementsByTagName(value); else return node.getElementById(selector);
 };
-
 Vue.prototype.bus = global.bus = new Vue();
-
 const components = require.context("./", true, /\w+\.(vue)$/);
 components.keys().forEach(filename => {
   const config = components(filename);
   const name = filename.split("/").pop().replace(/\.\w+$/, "").replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
   Vue.component("v-" + name, config.default || config);
-  // console.log(filename, "mapped by", "v-" + name);
+  /* console.log(filename, "mapped by", "v-" + name);*/
 });
-
 const DATA = {
   c: {
-    alias: "c", title: "C", type: 1, time: 6, for_what: "Драйвера, микроконтроллеры, ОС и ПО", level_type: 1, need: false,
+    alias: "c",
+    title: "C",
+    type: 1,
+    time: 6,
+    for_what: "Драйвера, микроконтроллеры, ОС и ПО",
+    level_type: 1,
+    need: false,
     videos: {
       1: {
         alias: "c4hour",
@@ -56,14 +52,8 @@ const DATA = {
     indexDescription: "Си — компилируемый статически типизированный язык программирования общего назначения. Это устоявшийся в IT язык. Он широко используется в desktop программах, для микроконтролеров, а в некоторых случаях на нем можно писать игры",
   },
 };
-
 const enterApp = new Vue({
   el: '#app',
-  filter: {
-    cut(text) {
-      return text.slice(0, 210) + "...";
-    },
-  },
   data() {
     return DATA;
   },

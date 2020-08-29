@@ -1,7 +1,7 @@
 <template>
   <div class="col-4">
     <div class="card">
-      <img class="card-img-top" src="/assets/img/currentImg/c/videos/c4hour.png" alt="Card image cap">
+      <img class="card-img-top" src="/assets/img/catalog/c/videos/c4hour.png" alt="Card image cap">
       <div class="card-body p-1 text-center">
         <a href="#" class="card-title my-1 h5">{{title}}</a>
         <br>
