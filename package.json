@@ -11,7 +11,7 @@
   "scripts": {
     "watch": "webpack-dev-server --config ./build/webpack.dev.conf.js",
     "build": "rimraf dist && webpack --config ./build/webpack.build.conf.js",
-    "server": "node server.js webpack --mode=development"
+    "start": "node server.js webpack --mode=development"
   },
   "browserslist": [
     "> 1%",

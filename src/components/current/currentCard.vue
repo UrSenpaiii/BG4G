@@ -6,7 +6,7 @@
           <img width="200" class="border" :src="'/assets/img/catalog/' + alias + '.png'">
         </a>
         <div class="col-7">
-          <a href="/pages/article.html" class="h3">{{title}}</a>
+          <a href="/pages/article.html" class="h3">{{title}}выфв</a>
           <div class="text-capitalize h5 mt-2">Автор: {{author}}</div>
         </div>
         <div class="text-muted my-2" v-html="description"></div>
@@ -17,9 +17,9 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      alias: String, title: String, author: String, description: String, support: String
-    }
+export default {
+  props: {
+    alias: String, title: String, author: String, description: String, support: String
   }
+}
 </script>

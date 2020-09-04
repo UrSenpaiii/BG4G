@@ -1,5 +1,5 @@
 <template>
-  <!--User block-->
+<!--User block-->
   <div>
     <!--Buttons-->
     <ul class="navbar-nav">
@@ -90,7 +90,8 @@
 <style lang="scss" scoped>
 @mixin icon-bg($icon) {
   padding-left: 40px;
-  background: url(#{$img-path}icons/#{$icon}.png);
+  background: url(#{$img-path}icons/#{$icon}.png) 22px center / 34px no-repeat;
+  background-size: 35px;
 }
 
 .login-ico {
