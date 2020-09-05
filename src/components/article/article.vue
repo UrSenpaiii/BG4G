@@ -82,15 +82,15 @@
         <!--The Same content-->
         <section class="border-top">
           <div id="carouselId" class="carousel slide" data-interval="false">
+            <a class="carousel-control-prev carousel-control-wight d-flex justify-content-start pl-3" href="#carouselId"
+               data-slide="prev">
+              <div class="btn btn-sm btn-outline-dark h4"><</div>
+            </a>
             <div class="carousel-inner">
               <!--Carousel Item-->
               <slot name="carouselItem"></slot>
             </div>
             <!--Controls-->
-            <a class="carousel-control-prev carousel-control-wight d-flex justify-content-start pl-3" href="#carouselId"
-               data-slide="prev">
-              <div class="btn btn-sm btn-outline-dark h4"><</div>
-            </a>
             <a class="carousel-control-next carousel-control-wight d-flex justify-content-end pr-3" href="#carouselId"
                data-slide="next">
               <div class="btn btn-sm btn-outline-dark h4">></div>
