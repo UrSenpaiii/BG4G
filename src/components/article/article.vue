@@ -86,6 +86,7 @@
                data-slide="prev">
               <div class="btn btn-sm btn-outline-dark h4"><</div>
             </a>
+            <!--Carousel-->
             <div class="carousel-inner">
               <!--Carousel Item-->
               <slot name="carouselItem"></slot>
@@ -142,11 +143,10 @@
 
   .page-link {
     color: $neutral-custom;
-  }
-
-  .page-link:hover, .page-link.active {
-    color: #fff;
-    background-color: $neutral-custom;
+    &:hover, &.active {
+      color: #fff;
+      background-color: $neutral-custom;
+    }
   }
 
   li {

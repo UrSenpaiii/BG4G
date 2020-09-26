@@ -14,36 +14,36 @@
 </template>
 
 <script>
-  export default {
-    props: {sub: Boolean, link: String},
-    data() {
-      return {
-        showSub: false,
-      }
+export default {
+  props: {sub: Boolean, link: String},
+  data() {
+    return {
+      showSub: false
+    }
+  },
+  computed: {
+    iconsColor() {
+      return this.sub ? 'fas ico-lighter' : 'far'
     },
-    computed: {
-      iconsColor() {
-        return this.sub ? "fas ico-lighter" : "far"
-      },
-      icoTitle() {
-        return this.sub ? "Переключить" : ""
-      }
-    },
-    methods: {
-      showSubBlock(e) {
-        this.showSub = !this.showSub;
-        if (this.sub) event.target.classList.toggle("fa-folder-open");
-      }
+    icoTitle() {
+      return this.sub ? 'Переключить' : ''
+    }
+  },
+  methods: {
+    showSubBlock(e) {
+      this.showSub = !this.showSub
+      if (this.sub) event.target.classList.toggle('fa-folder-open')
     }
   }
+}
 </script>
 
 <style scoped>
-  .sitemap-list-item {
-    padding: .1em;
-  }
+.sitemap-list-item {
+  padding: .1em;
+}
 
-  .sub-list {
-    margin-left: 1.1em;
-  }
+.sub-list {
+  margin-left: 1.1em;
+}
 </style>
